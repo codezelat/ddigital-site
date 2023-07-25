@@ -49,7 +49,7 @@ const serviceLinks = [
 const Services: React.FC = () => {
 
   return (
-    <div id="services" className="p-5 m-2 sm:m-5 lg:mt-20">
+    <div id="services" className="p-5 m-2 sm:m-5 lg:mt-32">
         <div className="flex flex-col lg:flex-row">
           <div className="lg:w-2/3 ">
             <h1 className="text-4xl lg:text-5xl mb-4 font-semibold">
@@ -59,13 +59,13 @@ const Services: React.FC = () => {
           <div className="lg:w-1/3">
             <div className=" text-lg lg:text-3xl text-black font-semibold flex items-center justify-center float-left lg:float-right">
               <Link href="/all-services">
-                <i className="fas fa-arrow-right bg-black rounded-full text-white p-3 lg:p-4 mr-4"></i>{" "}
+                <i className="fas fa-arrow-right bg-black text-white rounded-2xl p-3 lg:p-4 mr-4"></i>{" "}
                 View Services
               </Link>
             </div>
           </div>
         </div>
-        <div className=" mt-20 lg:mt-20 text-white">
+        <div className=" mt-20 text-white">
           <div className="flex flex-col lg:flex-row bg-black rounded-xl p-10 mb-5 shadow-2xl">
             <div className="lg:w-1/3 justify-center items-center m-2 rounded-xl">
               <Image

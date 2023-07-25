@@ -15,7 +15,8 @@ const Hero: React.FC = () => {
   }, [texts.length]);
 
   return (
-    <div>
+    <div 
+    >
       <div className="flex flex-col lg:flex-row p-5 m-2 sm:m-5 lg:mt-20">
         <div className="w-full lg:w-2/3">
           <h1 className="text-6xl lg:text-9xl mb-4 font-semibold">Designs</h1>
@@ -24,8 +25,8 @@ const Hero: React.FC = () => {
             {texts[currentTextIndex]}
           </h1>
         </div>
-        <div className="w-full lg:w-1/3">
-          <div className="mb-9 text-center lg:text-right flex items-center justify-center">
+        <div className="w-full lg:w-1/3 ">
+          <div className="h-full flex items-center justify-left">
             <Link
               href="/add"
               className="p-2 mx-4 text-4xl lg:text-7xl text-white font-semibold bg-black rounded-full flex items-center justify-center lg:float-right w-24 h-24 lg:w-48 lg:h-48 mt-6 lg:mt-0 float-right"

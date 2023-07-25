@@ -18,7 +18,6 @@ const Slider: React.FC = () => {
   return (
     <>
       <Swiper
-        // install Swiper modules
         modules={[Pagination, A11y, Autoplay]}
         spaceBetween={50}
         slidesPerView={3}
@@ -27,20 +26,22 @@ const Slider: React.FC = () => {
           delay: 1000,
           disableOnInteraction: false,
         }}
+        centeredSlides
+        centerInsufficientSlides
         pagination={{ clickable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
       >
         {imagePaths.map((imagePath, index) => (
           <SwiperSlide key={index}>
             <div className="swiper-lazy-preloader"></div>
-            <Image
+            <div className="flex flex-row  justify-center content-center">
+              <Image
               src={imagePath}
               height="100"
               width="250"
               alt={`Slide ${index + 1}`}
               loading="lazy"
-            />
+            /></div>
+            
           </SwiperSlide>
         ))}
       </Swiper>

@@ -17,7 +17,7 @@ export default function RootLayout({
       <body>
         <Header />
         {/* <Drawer/> */}
-        <main>{children}</main>
+        <main className="px-8">{children}</main>
         <Footer />
       </body>
     </html>

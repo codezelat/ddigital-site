@@ -41,8 +41,8 @@ function Header() {
   }, []);
 
   return (
-    <header className="items-center rounded-3xl bg-white bg-opacity-30 backdrop-blur-10 m-5 shadow-2xl">
-      <div className="flex flex-col lg:flex-row justify-between items-center">
+    <header className="items-center rounded-3xl bg-white bg-opacity-30 backdrop-blur-10 m-5 shadow-2xl mx-12">
+      <div className="flex flex-col lg:flex-row justify-between items-center px-4">
         <div className="flex items-center justify-center m-5">
           <div className="text-4xl font-bold font-kalam">DDigital</div>
         </div>
@@ -62,7 +62,7 @@ function Header() {
           <div className="relative">
             <Link
               href="/add"
-              className="p-4 mx-8 text-lg text-white font-semibold bg-black rounded-full flex items-center justify-center"
+              className="p-4 ml-0 sm:ml-6 text-lg text-white font-semibold bg-black rounded-full flex items-center justify-center"
               style={{ width: "48px", height: "48px" }}
             >
               <i className="fas fa-plus"></i>

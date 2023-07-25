@@ -65,12 +65,12 @@ const Feedbacks: React.FC = () => {
   };
 
   return (
-    <div id="feedback" className="m-5 pl-0 sm:pl-14 sm:m-5 lg:mt-20">
+    <div id="feedback" className="m-6 sm:m-10 mt-20 lg:mt-32 pb-20">
       <div className="flex flex-col lg:flex-row">
         <div className="lg:w-3/4">
-          <h1 className="text-4xl lg:text-8xl mb-12 sm:mb-32 font-semibold">
-            Hear what our clients say about us
-          </h1>
+        <h2 className="text-4xl lg:text-8xl mb-12 sm:mb-32 font-semibold s-full sm:w-2/3 ">
+          Hear why our clients love us <i className="fas fa-heart text-rose-300"></i>
+        </h2>
           <p className="text-lg lg:text-3xl mb-2 lg:mb-8 font-md h-48">
             {`&ldquo;${currentComment.quote}&rdquo;`}
           </p>
@@ -92,7 +92,7 @@ const Feedbacks: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="lg:w-1/3 flex items-end gap-3 lg:mr-30 sm:flex justify-center">
+        <div className="lg:w-1/3 flex items-end gap-3 lg:mr-30 sm:flex justify-center ">
           <div className="flex flex-col">
             <span
               className="inline-flex items-center rotate-180 transition-transform duration-100 ease-in-out hover:-translate-x-5"
