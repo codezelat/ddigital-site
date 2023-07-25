@@ -16,8 +16,8 @@ export default function Home() {
       <About/>
       <Services/>
       <Projects/>
-      <Feedbacks />
-      <BrandSlider />
+      <Feedbacks/>
+      <BrandSlider/>
       <Contact/>
     </>
   );
