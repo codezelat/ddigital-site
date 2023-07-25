@@ -1,6 +1,6 @@
-import Header from "./components/header";
+import Header from "./components/section/header";
 import "./globals.css";
-import Footer from "./components/footer";
+import Footer from "./components/section/footer";
 
 export const metadata = {
   title: "DDigital",
