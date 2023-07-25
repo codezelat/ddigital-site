@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
@@ -49,7 +48,7 @@ const serviceLinks = [
 const Projects: React.FC = () => {
   return (
     <div id="projects" className="p-5 m-2 sm:m-5 lg:mt-20">
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col lg:flex-row mb-6">
         <div className="lg:w-2/3 ">
           <h1 className="text-4xl lg:text-5xl mb-4 font-semibold">
             Featured works
@@ -66,10 +65,9 @@ const Projects: React.FC = () => {
       </div>
       <div>
         <Swiper
-          // install Swiper modules
           modules={[Navigation, Pagination, A11y, Autoplay]}
           spaceBetween={50}
-          slidesPerView={2}
+          slidesPerView={1}
           loop={true}
           autoplay={{
             delay: 2000,
@@ -77,8 +75,15 @@ const Projects: React.FC = () => {
           }}
           navigation
           pagination={{ clickable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
+          breakpoints={{
+            768: {
+              slidesPerView: 1,
+            },
+            992: {
+              slidesPerView: 2,
+            }
+          }
+          }
         >
           {serviceLinks.map((link, index) => (
             <SwiperSlide key={index}>
