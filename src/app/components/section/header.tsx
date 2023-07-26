@@ -13,7 +13,7 @@ function Header() {
   useEffect(() => {
     const handleScrollToElement = (
       e: MouseEvent<HTMLAnchorElement>,
-      id: string,
+      id: string
     ) => {
       e.preventDefault();
       const targetElement = document.querySelector(`#${id}`);

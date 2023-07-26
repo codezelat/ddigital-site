@@ -7,9 +7,7 @@ const About: React.FC = () => {
         <h2 className="text-3xl lg:text-4xl font-semibold text-center mt-12">
           About
         </h2>
-        <p className="text-lg text-center">
-          I'm a subway
-        </p>
+        <p className="text-lg text-center">I am a subway</p>
         <p className="text-lg lg:text-xl mb-4 font-md text-justify m-2 lg:m-10">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry standard dummy text ever

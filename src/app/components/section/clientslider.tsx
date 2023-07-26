@@ -35,13 +35,13 @@ const Slider: React.FC = () => {
             <div className="swiper-lazy-preloader"></div>
             <div className="flex flex-row  justify-center content-center">
               <Image
-              src={imagePath}
-              height="100"
-              width="250"
-              alt={`Slide ${index + 1}`}
-              loading="lazy"
-            /></div>
-            
+                src={imagePath}
+                height="100"
+                width="250"
+                alt={`Slide ${index + 1}`}
+                loading="lazy"
+              />
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>

@@ -42,7 +42,8 @@ const serviceLinks = [
     title: "GEMINI SKINCARE",
     category: "Web Design",
     href: "/post",
-  },{
+  },
+  {
     imageSrc:
       "https://img.freepik.com/fre-psd/business-company-landing-page-template_23-2148924995.jpg?w=1380&t=st=1688964129~exp=1688964729~hmac=5f4f1a1d5e243dc998ee58c745e139b8f5299bfcf261fc33b35e633c3c7a5d49",
     hoverImageSrc:
@@ -50,7 +51,8 @@ const serviceLinks = [
     title: "GEMINI SKINCARE",
     category: "Web Design",
     href: "/post",
-  },{
+  },
+  {
     imageSrc:
       "https://img.freepik.com/fre-psd/business-company-landing-page-template_23-2148924995.jpg?w=1380&t=st=1688964129~exp=1688964729~hmac=5f4f1a1d5e243dc998ee58c745e139b8f5299bfcf261fc33b35e633c3c7a5d49",
     hoverImageSrc:
@@ -58,7 +60,8 @@ const serviceLinks = [
     title: "GEMINI SKINCARE",
     category: "Web Design",
     href: "/post",
-  },{
+  },
+  {
     imageSrc:
       "https://img.freepik.com/fre-psd/business-company-landing-page-template_23-2148924995.jpg?w=1380&t=st=1688964129~exp=1688964729~hmac=5f4f1a1d5e243dc998ee58c745e139b8f5299bfcf261fc33b35e633c3c7a5d49",
     hoverImageSrc:
@@ -66,7 +69,8 @@ const serviceLinks = [
     title: "GEMINI SKINCARE",
     category: "Web Design",
     href: "/post",
-  },{
+  },
+  {
     imageSrc:
       "https://img.freepik.com/fre-psd/business-company-landing-page-template_23-2148924995.jpg?w=1380&t=st=1688964129~exp=1688964729~hmac=5f4f1a1d5e243dc998ee58c745e139b8f5299bfcf261fc33b35e633c3c7a5d49",
     hoverImageSrc:
@@ -108,7 +112,8 @@ const Projects: React.FC = () => {
             disableOnInteraction: false,
           }}
           navigation={{
-            nextEl:".arrow-right",prevEl:".arrow-left"
+            nextEl: ".arrow-right",
+            prevEl: ".arrow-left",
           }}
           pagination={{ clickable: true }}
           breakpoints={{
@@ -120,44 +125,46 @@ const Projects: React.FC = () => {
             },
             1024: {
               slidesPerView: 3,
-            }
-          }
-          }
+            },
+          }}
         >
           {serviceLinks.map((link, index) => (
             <SwiperSlide key={index}>
               <>
-              <div className="flex flex-col relative  items-center text-center ">
-                <div className="absolute left-[57%] top-[5%] bg-black text-white text-md text-center font-semibold px-3 py-3 rounded-md z-40 w-32">
-                  {link.category}
-                </div>
-                <div className="flex flex-col items-center justify-center h-96 w-96 rounded-xl" style={{ backgroundImage: `url(${link.imageSrc})` }}>
-                  <div className="inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity m-6">
-                    <Image
-                      className="object-cover rounded-xl w-80 h-80"
-                      src={link.hoverImageSrc}
-                      alt="Hover Image Description"
-                      width={500}
-                      height={500}
-                      loading="lazy"
-                    />
+                <div className="flex flex-col relative  items-center text-center ">
+                  <div className="absolute left-[57%] top-[5%] bg-black text-white text-md text-center font-semibold px-3 py-3 rounded-md z-40 w-32">
+                    {link.category}
+                  </div>
+                  <div
+                    className="flex flex-col items-center justify-center h-96 w-96 rounded-xl"
+                    style={{ backgroundImage: `url(${link.imageSrc})` }}
+                  >
+                    <div className="inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity m-6">
+                      <Image
+                        className="object-cover rounded-xl w-80 h-80"
+                        src={link.hoverImageSrc}
+                        alt="Hover Image Description"
+                        width={500}
+                        height={500}
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-col">
+                    <div className="text-xl text-black font-bold mt-5">
+                      {link.title}
+                    </div>
                   </div>
                 </div>
-                <div className="flex flex-col">
-                  <div className="text-xl text-black font-bold mt-5">
-                    {link.title}
-                  </div>
-                </div>
-              </div>
               </>
             </SwiperSlide>
           ))}
         </Swiper>
         <div className="flex flex-row">
-        <div className="lg:w-2/3"></div>
-        <div className="lg:w-1/3 flex items-end justify-center mt-10  gap-3 lg:mr-30">
-          <button className="arrow-left rotate-180 transition-transform duration-100 ease-in-out hover:-translate-x-5">
-          <svg
+          <div className="lg:w-2/3"></div>
+          <div className="lg:w-1/3 flex items-end justify-center mt-10  gap-3 lg:mr-30">
+            <button className="arrow-left rotate-180 transition-transform duration-100 ease-in-out hover:-translate-x-5">
+              <svg
                 width="70"
                 height="80"
                 viewBox="0 0 84 22"
@@ -179,8 +186,9 @@ const Projects: React.FC = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-          </button>
-          <button className="arrow-right transition-transform duration-100 ease-in-out hover:translate-x-8"><svg
+            </button>
+            <button className="arrow-right transition-transform duration-100 ease-in-out hover:translate-x-8">
+              <svg
                 width="150"
                 height="80"
                 viewBox="0 0 84 22"
@@ -201,10 +209,10 @@ const Projects: React.FC = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
-              </svg></button>
+              </svg>
+            </button>
+          </div>
         </div>
-        </div>
-        
       </div>
     </div>
   );

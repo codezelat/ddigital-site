@@ -68,9 +68,10 @@ const Feedbacks: React.FC = () => {
     <div id="feedback" className="m-6 sm:m-10 mt-20 lg:mt-32 pb-20">
       <div className="flex flex-col lg:flex-row">
         <div className="lg:w-3/4">
-        <h2 className="text-4xl lg:text-8xl mb-12 sm:mb-32 font-semibold s-full sm:w-2/3 ">
-          Hear why our clients love us <i className="fas fa-heart text-rose-300"></i>
-        </h2>
+          <h2 className="text-4xl lg:text-8xl mb-12 sm:mb-32 font-semibold s-full sm:w-2/3 ">
+            Hear why our clients love us{" "}
+            <i className="fas fa-heart text-rose-300"></i>
+          </h2>
           <p className="text-lg lg:text-3xl mb-2 lg:mb-8 font-md h-48">
             {`&ldquo;${currentComment.quote}&rdquo;`}
           </p>

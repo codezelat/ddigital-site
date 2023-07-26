@@ -15,8 +15,7 @@ const Hero: React.FC = () => {
   }, [texts.length]);
 
   return (
-    <div 
-    >
+    <div>
       <div className="flex flex-col lg:flex-row p-5 m-2 sm:m-5 lg:mt-20">
         <div className="w-full lg:w-2/3">
           <h1 className="text-6xl lg:text-9xl mb-4 font-semibold">Designs</h1>
