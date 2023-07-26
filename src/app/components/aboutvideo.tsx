@@ -19,6 +19,7 @@ const VideoPlayer: React.FC = () => {
       controls
       onEnded={handleVideoEnded}
       ref={videoRef}
+      id="about-video"
     >
       <source src="/videos/sample_video.mp4" type="video/mp4" />
     </video>

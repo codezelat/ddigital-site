@@ -26,14 +26,14 @@ const Services: React.FC = () => {
           <div className=" text-lg lg:text-3xl text-black font-semibold flex items-center justify-center float-left lg:float-right">
             <Link href="/all-services">
               <i className="fas fa-arrow-right bg-black text-white rounded-2xl p-3 lg:p-4 mr-4"></i>{" "}
-              View Services
+              Explore All Services
             </Link>
           </div>
         </div>
       </div>
       <div className="mt-20 text-white relative overflow-hidden">
         <div
-          className={`outer-service-div flex flex-col lg:flex-row bg-white rounded-xl p-8 border-2 border-black w-full h-96 bg-no-repeat bg-cover bg-center`}
+          className={`outer-service-div flex flex-col lg:flex-row bg-white rounded-xl p-8 w-full h-96 bg-no-repeat bg-cover bg-center`}
           style={{
             backgroundImage: `url("https://images.unsplash.com/photo-1574169208507-84376144848b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=879&q=80")`,
           }}

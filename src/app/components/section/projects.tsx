@@ -1,10 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import Link from "next/link";
-import "../../styles/projects.css";
 
 const serviceLinks = [
   {
@@ -86,15 +85,13 @@ const Projects: React.FC = () => {
     <div id="projects" className="p-5 m-2 sm:m-5 lg:mt-32">
       <div className="flex flex-col lg:flex-row mb-6 ">
         <div className="lg:w-2/3 ">
-          <h1 className="text-4xl lg:text-5xl mb-4 font-semibold">
-            Featured Work
-          </h1>
+          <h1 className="text-4xl lg:text-5xl mb-4 font-semibold">Our Work</h1>
         </div>
         <div className="lg:w-1/3">
           <div className=" text-lg lg:text-3xl text-black font-semibold flex items-center justify-center float-left lg:float-right">
             <Link href="/all-projects">
               <i className="fas fa-arrow-right bg-black rounded-2xl text-white p-3 lg:p-4 mr-4"></i>{" "}
-              View Projects
+              Explore All Projects
             </Link>
           </div>
         </div>
