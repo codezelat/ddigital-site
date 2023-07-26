@@ -1,8 +1,7 @@
-
 .swiper {
-    overflow: visible !important;
-  }
-  .swiper-pagination {
-    position: absolute !important;
-    bottom: -40px !important;
-  }
+  overflow-y: visible !important;
+}
+.swiper-pagination {
+  position: absolute !important;
+  bottom: -40px !important;
+}

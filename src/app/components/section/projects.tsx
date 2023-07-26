@@ -155,7 +155,7 @@ const Projects: React.FC = () => {
         </Swiper>
         <div className="flex flex-row">
         <div className="lg:w-2/3"></div>
-        <div className="lg:w-1/3 flex items-end items-center justify-center mt-10  gap-3 lg:mr-30">
+        <div className="lg:w-1/3 flex items-end justify-center mt-10  gap-3 lg:mr-30">
           <button className="arrow-left rotate-180 transition-transform duration-100 ease-in-out hover:-translate-x-5">
           <svg
                 width="70"
