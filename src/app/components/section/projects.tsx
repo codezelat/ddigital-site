@@ -82,7 +82,7 @@ const serviceLinks = [
 
 const Projects: React.FC = () => {
   return (
-    <div id="projects" className="p-5 m-2 sm:m-5 lg:mt-32">
+    <div id="projects" className="lg:p-5 m-2 sm:m-5 mt-24 md:mt-28 lg:mt-32">
       <div className="flex flex-col lg:flex-row mb-6 ">
         <div className="lg:w-2/3 ">
           <h1 className="text-4xl lg:text-5xl mb-4 font-semibold">Our Work</h1>
@@ -129,7 +129,7 @@ const Projects: React.FC = () => {
             <SwiperSlide key={index}>
               <>
                 <div className="flex flex-col relative  items-center text-center ">
-                  <div className="absolute left-[57%] top-[5%] bg-black text-white text-md text-center font-semibold px-3 py-3 rounded-md z-40 w-32">
+                  <div className="absolute left-[48%] lg:left-[57%] top-[5%] bg-black text-white text-md text-center font-semibold px-3 py-3 rounded-md z-40 w-32">
                     {link.category}
                   </div>
                   <div
@@ -157,7 +157,7 @@ const Projects: React.FC = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="flex flex-row">
+        <div className="flex flex-col lg:flex-row">
           <div className="lg:w-2/3"></div>
           <div className="lg:w-1/3 flex items-end justify-center mt-10  gap-3 lg:mr-30">
             <button className="arrow-left rotate-180 transition-transform duration-100 ease-in-out hover:-translate-x-5">

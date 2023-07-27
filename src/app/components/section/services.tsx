@@ -15,7 +15,7 @@ const Services: React.FC = () => {
   };
 
   return (
-    <div id="services" className="p-5 m-2 sm:m-5 lg:mt-32">
+    <div id="services" className="lg:p-5 m-2 sm:m-5 mt-24 md:mt-28 lg:mt-32">
       <div className="flex flex-col lg:flex-row">
         <div className="lg:w-2/3 ">
           <h1 className="text-4xl lg:text-5xl mb-4 font-semibold">

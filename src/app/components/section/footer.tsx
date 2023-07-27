@@ -3,7 +3,7 @@ import Link from "next/link";
 const Footer: React.FC = () => {
   return (
     <footer className="items-center bg-black text-white mt-32 px-10">
-      <div className="p-5">
+      <div className="lg:p-5">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5">
           <div className="text-center sm:text-start col-span-3">
             <ul className="list-none text-4xl p-8 m-0">
@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="p-5">
+      <div className="lg:p-5">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
           <div className="text-center sm:text-start">
             <ul className="list-none text-sm p-8 m-0">

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Contact: React.FC = () => {
   return (
-    <div id="contact" className="p-5 m-2 sm:m-5 lg:mt-32">
+    <div id="contact" className="lg:p-5 m-2 sm:m-5 mt-24 md:mt-28 lg:mt-32">
       <div className="flex flex-col lg:flex-row">
         <div className="lg:w-2/3 ">
           <h1 className="text-4xl lg:text-5xl mb-4 font-semibold">
@@ -67,7 +67,7 @@ const Contact: React.FC = () => {
             </form>
           </div>
         </div>
-        <div className="lg:w-2/5 bg-black hover:bg-green text-white rounded-xl ml-0 sm:ml-12 p-5 shadow-2xl justify-center items-center lg:block align-middle">
+        <div className="lg:w-2/5 bg-black hover:bg-green text-white rounded-xl ml-0 sm:ml-12 p-5 shadow-2xl justify-center items-center lg:block align-middle block hidden lg:block">
           <div className="w-full h-full flex flex-col justify-center items-center align-middle">
             <div className="w-full flex justify-center mb-16 mt-24">
               <h2 className="text-4xl lg:text-5xl font-semibold">

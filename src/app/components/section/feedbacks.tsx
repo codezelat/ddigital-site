@@ -65,17 +65,17 @@ const Feedbacks: React.FC = () => {
   };
 
   return (
-    <div id="feedback" className="m-6 sm:m-10 mt-20 lg:mt-32 pb-20">
+    <div id="feedback" className="m-0 sm:m-10 mt-20 lg:mt-32 lg:pb-20">
       <div className="flex flex-col lg:flex-row">
         <div className="lg:w-3/4">
-          <h2 className="text-4xl lg:text-8xl mb-12 sm:mb-32 font-semibold s-full sm:w-2/3 ">
+          <h2 className="text-4xl md:text-6xl lg:text-8xl mb-12 md:mb-12 sm:mb-32 font-semibold s-full sm:w-2/3 ">
             Hear why our clients love us{" "}
             <i className="fas fa-heart text-rose-300"></i>
           </h2>
-          <p className="text-lg lg:text-3xl mb-2 lg:mb-8 font-md h-48">
+          <p className="text-lg lg:text-3xl mb-2 md:mb-0 lg:mb-8 font-md h-48">
             {`&ldquo;${currentComment.quote}&rdquo;`}
           </p>
-          <div className="flex lg:flex-row items-center">
+          <div className="flex lg:flex-row items-center pt-12 md:pt-0 lg:pt-0">
             <div className="flex flex-col">
               <h1 className="text-lg sm:text-2xl font-semibold">
                 {currentComment.author}

@@ -20,7 +20,7 @@ const Slider: React.FC = () => {
       <Swiper
         modules={[Pagination, A11y, Autoplay]}
         spaceBetween={50}
-        slidesPerView={3}
+        slidesPerView={1}
         loop={true}
         autoplay={{
           delay: 1000,
@@ -29,6 +29,14 @@ const Slider: React.FC = () => {
         centeredSlides
         centerInsufficientSlides
         pagination={{ clickable: true }}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 3,
+          }
+        }}
       >
         {imagePaths.map((imagePath, index) => (
           <SwiperSlide key={index}>
