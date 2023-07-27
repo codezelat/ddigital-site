@@ -3,6 +3,28 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../../styles/services.module.css";
 
+const services = [
+  {
+    title: "Poster Designing",
+    imageUrl1: "https://images.unsplash.com/photo-1574169208507-84376144848b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=879&q=80",
+    imageUrl2: "https://img.freepik.com/free-vector/website-interface-development-planning-devops-team-flat-characters-working-ui-ux-content-design-computer-software-creation-web-development_335657-2645.jpg?w=740&t=st=1688927928~exp=1688928528~hmac=ec2bf68fb2551a3d937c04571991b7edc8ecccef4978fe5f186ea6424dabb6ea",
+    link: "/service1",
+  },
+  {
+    title: "Cartoon Designing",
+    imageUrl1: "https://images.unsplash.com/photo-1574169208507-84376144848b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=879&q=80",
+    imageUrl2: "https://img.freepik.com/free-vector/website-interface-development-planning-devops-team-flat-characters-working-ui-ux-content-design-computer-software-creation-web-development_335657-2645.jpg?w=740&t=st=1688927928~exp=1688928528~hmac=ec2bf68fb2551a3d937c04571991b7edc8ecccef4978fe5f186ea6424dabb6ea",
+    link: "/service2",
+  },
+  {
+    title: "Web Designing",
+    imageUrl1: "https://images.unsplash.com/photo-1574169208507-84376144848b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=879&q=80",
+    imageUrl2: "https://img.freepik.com/free-vector/website-interface-development-planning-devops-team-flat-characters-working-ui-ux-content-design-computer-software-creation-web-development_335657-2645.jpg?w=740&t=st=1688927928~exp=1688928528~hmac=ec2bf68fb2551a3d937c04571991b7edc8ecccef4978fe5f186ea6424dabb6ea",
+    link: "/service3",
+  },
+];
+
+
 const Services: React.FC = () => {
   const [showInnerDiv, setShowInnerDiv] = useState(false);
 
@@ -31,21 +53,22 @@ const Services: React.FC = () => {
           </div>
         </div>
       </div>
+      {services.map((service) => (
       <div className="mt-20 text-white relative overflow-hidden">
         <div
           className={`outer-service-div flex flex-col lg:flex-row bg-white rounded-xl p-8 w-full h-96 bg-no-repeat bg-cover bg-center`}
           style={{
-            backgroundImage: `url("https://images.unsplash.com/photo-1574169208507-84376144848b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=879&q=80")`,
+            backgroundImage: `url("${service.imageUrl1}")`,
           }}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
           <div className="lg:w-2/3 flex flex-col items-center justify-center bg-black bg-opacity-50 p-10 rounded-xl w-fit">
             <span className="text-5xl lg:text-7xl font-semibold text-center text-white mb-8">
-              Poster Design
+              {service.title}
             </span>
             <Link
-              href="/all-services"
+              href={`${service.link}`}
               className="text-xl lg:text-2xl font-semibold flex items-center text-center text-white"
             >
               <i className="fas fa-arrow-right bg-white rounded-md text-black p-3 lg:p-4 mr-4"></i>{" "}
@@ -64,7 +87,7 @@ const Services: React.FC = () => {
           <div className="lg:w-1/3 justify-center items-center m-2 rounded-xl">
             <Image
               className="rounded-xl"
-              src="https://img.freepik.com/free-vector/website-interface-development-planning-devops-team-flat-characters-working-ui-ux-content-design-computer-software-creation-web-development_335657-2645.jpg?w=740&t=st=1688927928~exp=1688928528~hmac=ec2bf68fb2551a3d937c04571991b7edc8ecccef4978fe5f186ea6424dabb6ea"
+              src={`${service.imageUrl2}`}
               alt="Image Description"
               width={300}
               height={300}
@@ -72,11 +95,12 @@ const Services: React.FC = () => {
           </div>
           <div className="lg:w-2/3 flex flex-col justify-center items-center">
             <span className="text-5xl lg:text-7xl font-semibold text-center text-white mb-5">
-              Poster Design
+              {service.title}
             </span>
           </div>
         </div>
       </div>
+      ))}
     </div>
   );
 };
