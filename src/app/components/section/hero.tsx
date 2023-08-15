@@ -16,19 +16,19 @@ const Hero: React.FC = () => {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row p-0 lg:p-5  m-0 lg:m-2 mt-40 md:mt-60 lg:mt-40">
-        <div className="w-full lg:w-2/3">
-          <h1 className="text-6xl lg:text-9xl mb-4 font-semibold">Designs</h1>
-          <h1 className="text-6xl lg:text-9xl font-semibold">That</h1>
-          <h1 className="text-6xl lg:text-9xl font-semibold">
+      <div className="flex flex-col md:flex-row p-0 lg:p-5 m-2 sm:m-5 mt-40 md:mt-60 lg:mt-40">
+        <div className="w-full lg:w-2/3 text-center md:text-start">
+          <h1 className="text-6xl md:text-7xl lg:text-9xl mb-4 font-semibold">Designs</h1>
+          <h1 className="text-6xl md:text-7xl lg:text-9xl font-semibold">That</h1>
+          <h1 className="text-6xl md:text-7xl lg:text-9xl font-semibold">
             {texts[currentTextIndex]}
           </h1>
         </div>
         <div className="w-full lg:w-1/3 ">
-          <div className="h-full flex items-center justify-left">
+          <div className="h-full flex items-center justify-center lg:justify-left">
             <Link
               href="#about-video"
-              className="p-2 mx-4 text-4xl lg:text-7xl text-white font-semibold bg-black rounded-full flex items-center justify-center w-24 h-24 lg:w-48 lg:h-48 mt-6 lg:mt-0 "
+              className="p-2 mx-4 text-4xl lg:text-7xl text-white font-semibold bg-black rounded-full flex items-center justify-center w-36 h-36 lg:w-48 lg:h-48 mt-6 lg:mt-0 "
             >
               <i className={`fas fa-play ${style.animate_zoom}`}></i>
             </Link>
