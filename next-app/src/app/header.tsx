@@ -1,4 +1,6 @@
 "use client";
+import { faChevronDown, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { MouseEvent, useEffect, useState } from "react";
 
@@ -61,7 +63,12 @@ export default function Header() {
             className="md:hidden p-4 ml-4 text-lg text-white font-semibold bg-black rounded-full flex items-center justify-center"
             style={{ width: "48px", height: "48px" }}
           >
-            <i className="fas fa-plus"></i>
+            <FontAwesomeIcon
+              icon={faPlus}
+              height={24}
+              width={24}
+              className="text-white"
+            />
           </Link>
         </div>
         <div className="flex flex-wrap items-center justify-center lg:justify-start mb-2 md:m-5">
@@ -89,7 +96,12 @@ export default function Header() {
               className="p-4 ml-8 hidden md:flex text-lg text-white font-semibold bg-black rounded-full items-center justify-center"
               style={{ width: "48px", height: "48px" }}
             >
-              <i className="fas fa-plus"></i>
+              <FontAwesomeIcon
+                icon={faPlus}
+                height={24}
+                width={24}
+                className="text-white"
+              />
             </Link>
             <div
               className={`absolute top-full left-1/2 transform -translate-x-1/2 bg-white w-24 h-7 rounded-full flex md:hidden items-center justify-center -mt-3 ${
@@ -97,7 +109,12 @@ export default function Header() {
               }`}
               onClick={toggleHideOnMobile}
             >
-              <i className="fas fa-chevron-down text-black"></i>
+              <FontAwesomeIcon
+                icon={faChevronDown}
+                height={18}
+                width={18}
+                className="text-black"
+              />
             </div>
           </div>
         </div>

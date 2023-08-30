@@ -1,7 +1,8 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import style from "./hero-section.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
 export default function HeroSection() {
   const texts = ["Stand Out", "Impress", "Wow", "Rebel"];
@@ -33,7 +34,7 @@ export default function HeroSection() {
               href="#about-video"
               className="p-2 mx-4 text-4xl lg:text-7xl text-white font-semibold bg-black rounded-full flex items-center justify-center w-36 h-36 lg:w-48 lg:h-48 mt-6 lg:mt-0 "
             >
-              <i className={`fas fa-play ${style.animate_zoom}`}></i>
+              <FontAwesomeIcon icon={faPlay} height={120} width={120} beat />
             </Link>
           </div>
         </div>

@@ -1,3 +1,5 @@
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
 export default function ContactSection() {
@@ -79,7 +81,12 @@ export default function ContactSection() {
                 href="/add"
                 className="p-2 mx-4 text-4xl lg:text-7xl text-black font-semibold bg-white rounded-full flex items-center justify-center lg:float-right w-24 h-24 lg:w-48 lg:h-48 mt-6 lg:mt-0 float-right"
               >
-                <i className="fas fa-arrow-right"></i>
+                <FontAwesomeIcon
+                  icon={faArrowRight}
+                  className="text-black"
+                  width={100}
+                  height={100}
+                />
               </Link>
             </div>
             <div className="w-full flex justify-center h-full ">

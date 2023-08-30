@@ -6,6 +6,8 @@ import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { use } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const worksData = [
   {
@@ -92,7 +94,12 @@ export default function WorkSection() {
         <div className="lg:w-1/3">
           <div className=" text-lg lg:text-3xl text-black font-semibold flex items-center justify-center float-left lg:float-right">
             <Link href="/all-projects">
-              <i className="fas fa-arrow-right bg-black rounded-2xl text-white p-3 lg:p-4 mr-4"></i>{" "}
+              <FontAwesomeIcon
+                icon={faArrowRight}
+                className="bg-black rounded-2xl text-white p-3 lg:p-4 mr-4"
+                height={24}
+                width={24}
+              />
               Explore All Projects
             </Link>
           </div>
