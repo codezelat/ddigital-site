@@ -69,7 +69,7 @@ export default function ContactSection() {
             </form>
           </div>
         </div>
-        <div className="lg:w-2/5 bg-black hover:bg-green text-white rounded-xl ml-0 sm:ml-12 p-5 shadow-2xl justify-center items-center lg:block align-middle block hidden lg:block">
+        <div className="lg:w-2/5 bg-black hover:bg-green text-white rounded-xl ml-0 sm:ml-12 p-5 shadow-2xl justify-center items-center align-middle hidden lg:block">
           <div className="w-full h-full flex flex-col justify-center items-center align-middle">
             <div className="w-full flex justify-center mb-16 mt-24">
               <h2 className="text-4xl lg:text-5xl font-semibold">

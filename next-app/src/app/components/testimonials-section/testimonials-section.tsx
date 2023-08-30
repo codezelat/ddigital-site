@@ -50,7 +50,7 @@ export default function TestimonialsSection() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentCommentIndex(
-        (prevIndex) => (prevIndex + 1) % testimonials.length
+        (prevIndex) => (prevIndex + 1) % testimonials.length,
       );
     }, 3000);
 
@@ -61,13 +61,14 @@ export default function TestimonialsSection() {
 
   const handlePrevComment = () => {
     setCurrentCommentIndex(
-      (prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length
+      (prevIndex) =>
+        (prevIndex - 1 + testimonials.length) % testimonials.length,
     );
   };
 
   const handleNextComment = () => {
     setCurrentCommentIndex(
-      (prevIndex) => (prevIndex + 1) % testimonials.length
+      (prevIndex) => (prevIndex + 1) % testimonials.length,
     );
   };
 
