@@ -7,7 +7,7 @@ import WorkSection from "./components/work-section/work-section";
 
 export default function Home() {
   return (
-    <main>
+    <main className="px-12">
       <HeroSection />
       <AboutSection />
       <ServicesSection />
