@@ -87,7 +87,12 @@ export default function ServicesSection() {
                 href={`${service.link}`}
                 className="text-xl lg:text-2xl font-semibold flex items-center text-center text-white"
               >
-                <i className="fas fa-arrow-right bg-white rounded-md text-black p-3 lg:p-4 mr-4"></i>{" "}
+                <FontAwesomeIcon
+                icon={faArrowRight}
+                className="bg-white rounded-md text-black p-3 lg:p-4 mr-4"
+                height={18}
+                width={18}
+              />
                 Learn More
               </Link>
             </div>
