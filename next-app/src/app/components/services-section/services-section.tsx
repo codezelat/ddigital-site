@@ -37,14 +37,14 @@ const servicesData = [
 ];
 
 export default function ServicesSection() {
-  const [showInnerDiv, setShowInnerDiv] = useState(false);
+  const [showInnerDiv, setShowInnerDiv] = useState(null as any);
 
-  const handleMouseEnter = () => {
-    setShowInnerDiv(true);
+  const handleMouseEnter = (index: number) => {
+    setShowInnerDiv(index);
   };
 
   const handleMouseLeave = () => {
-    setShowInnerDiv(false);
+    setShowInnerDiv(0);
   };
 
   return (
@@ -70,14 +70,14 @@ export default function ServicesSection() {
         </div>
       </div>
       {servicesData.map((service, index) => (
-        <div className="mt-20 text-white relative overflow-hidden" key={index}>
+        <div className="mt-20 text-white relative overflow-hidden" key={index+1}>
           <div
             className={`outer-service-div flex flex-col lg:flex-row bg-white rounded-xl p-8 w-full h-96 bg-no-repeat bg-cover bg-center`}
             style={{
               backgroundImage: `url("${service.imageUrl1}")`,
             }}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={() => handleMouseLeave()}
           >
             <div className="lg:w-2/3 flex flex-col items-center justify-center bg-black bg-opacity-50 p-10 rounded-xl w-fit">
               <span className="text-5xl lg:text-7xl font-semibold text-center text-white mb-8">
@@ -100,10 +100,10 @@ export default function ServicesSection() {
 
           <div
             className={`inner-service-div absolute top-0 left-0 flex flex-col lg:flex-row bg-black rounded-xl items-center content-center p-4 md:p-8 border-0 w-full h-96 ${
-              !showInnerDiv ? styles.showInnerDiv : styles.hideInnerDiv
+              showInnerDiv === index ? styles.hideInnerDiv : styles.showInnerDiv
             }`}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={() => handleMouseLeave()}
           >
             <div className="lg:w-1/3 justify-center items-center m-2 rounded-xl content-center flex">
               <Image

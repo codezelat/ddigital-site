@@ -24,8 +24,8 @@ export default function AboutSection() {
       </div>
       <div className="lg:w-2/5 bg-black text-white items-center justify-center rounded-xl lg:m-5 p-5 shadow-2xl">
         <LiteYouTubeEmbed
-          id="HaEPXoXVf2k"
-          title="Amazon DynamoDB Deep Dive"
+          id="A90XpRc5ke0&ab"
+          title="Ddigital - Your One-Spot Digital Media Hub"
           poster="hqdefault"
           webp
         />
