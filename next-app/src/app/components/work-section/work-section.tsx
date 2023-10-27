@@ -10,73 +10,57 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const worksData = [
   {
-    imageSrc:
-      "https://img.freepik.com/free-psd/business-company-landing-page-template_23-2148924995.jpg?w=1380&t=st=1688964129~exp=1688964729~hmac=5f4f1a1d5e243dc998ee58c745e139b8f5299bfcf261fc33b35e633c3c7a5d49",
-    hoverImageSrc:
-      "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg?w=826&t=st=1688963719~exp=1688964319~hmac=1beb954c72a77cb66e1c7bad1cb41befc57fd8fcfa8704ae78362a4e306e2461",
+    imageSrc: "/img/work/1.jpg",
+    hoverImageSrc: "/img/work-hover/1.jpg",
     title: "Rumikmart",
     category: "Branding",
     href: "/work/Rumikmart - Work With Ddigital_compressed.pdf",
   },
   {
-    imageSrc:
-      "https://img.freepik.com/free-psd/business-company-landing-page-template_23-2148924995.jpg?w=1380&t=st=1688964129~exp=1688964729~hmac=5f4f1a1d5e243dc998ee58c745e139b8f5299bfcf261fc33b35e633c3c7a5d49",
-    hoverImageSrc:
-      "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg?w=826&t=st=1688963719~exp=1688964319~hmac=1beb954c72a77cb66e1c7bad1cb41befc57fd8fcfa8704ae78362a4e306e2461",
+    imageSrc: "/img/work/2.jpg",
+    hoverImageSrc: "/img/work-hover/2.jpg",
     title: "Osthar",
     category: "Branding",
     href: "/work/Osthar - Work With Ddigital_compressed.pdf",
   },
   {
-    imageSrc:
-      "https://img.freepik.com/free-psd/busness-company-landing-page-template_23-2148924995.jpg?w=1380&t=st=1688964129~exp=1688964729~hmac=5f4f1a1d5e243dc998ee58c745e139b8f5299bfcf261fc33b35e633c3c7a5d49",
-    hoverImageSrc:
-      "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg?w=826&t=st=1688963719~exp=1688964319~hmac=1beb954c72a77cb66e1c7bad1cb41befc57fd8fcfa8704ae78362a4e306e2461",
+    imageSrc: "/img/work/3.jpg",
+    hoverImageSrc: "/img/work-hover/3.jpg",
     title: "Dataleed",
     category: "UI Design",
     href: "/work/Dataleed - Work With Ddigital_compressed.pdf",
   },
   {
-    imageSrc:
-      "https://img.freepik.com/fre-psd/business-company-landing-page-template_23-2148924995.jpg?w=1380&t=st=1688964129~exp=1688964729~hmac=5f4f1a1d5e243dc998ee58c745e139b8f5299bfcf261fc33b35e633c3c7a5d49",
-    hoverImageSrc:
-      "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg?w=826&t=st=1688963719~exp=1688964319~hmac=1beb954c72a77cb66e1c7bad1cb41befc57fd8fcfa8704ae78362a4e306e2461",
+    imageSrc: "/img/work/4.jpg",
+    hoverImageSrc: "/img/work-hover/4.jpg",
     title: "Monster",
     category: "UI Design",
     href: "/work/Monster - Work With Ddigital_compressed.pdf",
   },
   {
-    imageSrc:
-      "https://img.freepik.com/fre-psd/business-company-landing-page-template_23-2148924995.jpg?w=1380&t=st=1688964129~exp=1688964729~hmac=5f4f1a1d5e243dc998ee58c745e139b8f5299bfcf261fc33b35e633c3c7a5d49",
-    hoverImageSrc:
-      "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg?w=826&t=st=1688963719~exp=1688964319~hmac=1beb954c72a77cb66e1c7bad1cb41befc57fd8fcfa8704ae78362a4e306e2461",
+    imageSrc: "/img/work/5.jpg",
+    hoverImageSrc: "/img/work-hover/5.jpg",
     title: "Yeti",
     category: "Illustrations",
     href: "/work/Yeti - Work With Ddigital_compressed.pdf",
   },
   {
-    imageSrc:
-      "https://img.freepik.com/fre-psd/business-company-landing-page-template_23-2148924995.jpg?w=1380&t=st=1688964129~exp=1688964729~hmac=5f4f1a1d5e243dc998ee58c745e139b8f5299bfcf261fc33b35e633c3c7a5d49",
-    hoverImageSrc:
-      "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg?w=826&t=st=1688963719~exp=1688964319~hmac=1beb954c72a77cb66e1c7bad1cb41befc57fd8fcfa8704ae78362a4e306e2461",
+    imageSrc: "/img/work/6.jpg",
+    hoverImageSrc: "/img/work-hover/6.jpg",
     title: "EhaKade",
     category: "Branding",
     href: "/work/EhaKade - Work With Ddigital_compressed.pdf",
   },
   {
-    imageSrc:
-      "https://img.freepik.com/fre-psd/business-company-landing-page-template_23-2148924995.jpg?w=1380&t=st=1688964129~exp=1688964729~hmac=5f4f1a1d5e243dc998ee58c745e139b8f5299bfcf261fc33b35e633c3c7a5d49",
-    hoverImageSrc:
-      "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg?w=826&t=st=1688963719~exp=1688964319~hmac=1beb954c72a77cb66e1c7bad1cb41befc57fd8fcfa8704ae78362a4e306e2461",
+    imageSrc: "/img/work/7.jpg",
+    hoverImageSrc: "/img/work-hover/7.jpg",
     title: "Ceylumin",
     category: "Photography",
     href: "/work/Ceylumin - Work With Ddigital_compressed.pdf",
   },
   {
-    imageSrc:
-      "https://img.freepik.com/fre-psd/business-company-landing-page-template_23-2148924995.jpg?w=1380&t=st=1688964129~exp=1688964729~hmac=5f4f1a1d5e243dc998ee58c745e139b8f5299bfcf261fc33b35e633c3c7a5d49",
-    hoverImageSrc:
-      "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg?w=826&t=st=1688963719~exp=1688964319~hmac=1beb954c72a77cb66e1c7bad1cb41befc57fd8fcfa8704ae78362a4e306e2461",
+    imageSrc: "/img/work/8.jpg",
+    hoverImageSrc: "/img/work-hover/8.jpg",
     title: "Codezela",
     category: "Illustrations",
     href: "/work/Codezela Illustrations - Work With Ddigital_compressed.pdf",
@@ -137,17 +121,17 @@ export default function WorkSection() {
             <SwiperSlide key={index}>
               <>
                 <div className="flex flex-col relative  items-center text-center ">
-                  <div className="absolute left-[48%] lg:left-[57%] top-[5%] bg-black text-white text-md text-center font-semibold px-3 py-3 rounded-md z-40 w-32">
+                  <div className="absolute left-[55%] top-[15%] bg-black text-white text-md text-center font-semibold px-3 py-3 rounded-md z-40 w-32">
                     {data.category}
                   </div>
                   <div
-                    className="flex flex-col items-center justify-center h-96 w-96 rounded-xl"
+                    className="flex flex-col bg-center bg-cover items-center justify-center h-96 w-96 rounded-xl"
                     style={{ backgroundImage: `url(${data.imageSrc})` }}
                   >
                     <Link href={data.href} target="_blank">
                       <div className="inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity m-6">
                         <Image
-                          className="object-cover rounded-xl w-80 h-80"
+                          className="object-cover rounded-xl w-95 h-95"
                           src={data.hoverImageSrc}
                           alt="Hover Image Description"
                           width={500}
