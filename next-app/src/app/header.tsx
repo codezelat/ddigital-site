@@ -8,7 +8,7 @@ const navigationLinks = [
   { url: "/header", title: "Home", isActive: true },
   { url: "/services", title: "Services" },
   { url: "/projects", title: "Work" },
-  { url: "/contact", title: "Contact" },
+  // { url: "/contact", title: "Contact" },
 ];
 
 export default function Header() {
@@ -93,7 +93,7 @@ export default function Header() {
           </div>
           <div className="relative">
             <Link
-              href="#"
+              href="#contact"
               className="p-4 ml-8 hidden md:flex text-lg text-white font-semibold bg-black rounded-full items-center justify-center"
               style={{ width: "48px", height: "48px" }}
             >
