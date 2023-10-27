@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { use } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
@@ -15,72 +14,72 @@ const worksData = [
       "https://img.freepik.com/free-psd/business-company-landing-page-template_23-2148924995.jpg?w=1380&t=st=1688964129~exp=1688964729~hmac=5f4f1a1d5e243dc998ee58c745e139b8f5299bfcf261fc33b35e633c3c7a5d49",
     hoverImageSrc:
       "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg?w=826&t=st=1688963719~exp=1688964319~hmac=1beb954c72a77cb66e1c7bad1cb41befc57fd8fcfa8704ae78362a4e306e2461",
-    title: "GEMINI SKINCARE",
-    category: "Web Design",
-    href: "/post",
+    title: "Rumikmart",
+    category: "Branding",
+    href: "/work/Rumikmart - Work With Ddigital_compressed.pdf",
   },
   {
     imageSrc:
-      "https://img.freepik.com/free-psd/busins-company-landing-page-template_23-2148924995.jpg?w=1380&t=st=1688964129~exp=1688964729~hmac=5f4f1a1d5e243dc998ee58c745e139b8f5299bfcf261fc33b35e633c3c7a5d49",
+      "https://img.freepik.com/free-psd/business-company-landing-page-template_23-2148924995.jpg?w=1380&t=st=1688964129~exp=1688964729~hmac=5f4f1a1d5e243dc998ee58c745e139b8f5299bfcf261fc33b35e633c3c7a5d49",
     hoverImageSrc:
       "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg?w=826&t=st=1688963719~exp=1688964319~hmac=1beb954c72a77cb66e1c7bad1cb41befc57fd8fcfa8704ae78362a4e306e2461",
-    title: "GEMINI SKINCARE",
-    category: "Web Design",
-    href: "/post",
+    title: "Osthar",
+    category: "Branding",
+    href: "/work/Osthar - Work With Ddigital_compressed.pdf",
   },
   {
     imageSrc:
       "https://img.freepik.com/free-psd/busness-company-landing-page-template_23-2148924995.jpg?w=1380&t=st=1688964129~exp=1688964729~hmac=5f4f1a1d5e243dc998ee58c745e139b8f5299bfcf261fc33b35e633c3c7a5d49",
     hoverImageSrc:
       "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg?w=826&t=st=1688963719~exp=1688964319~hmac=1beb954c72a77cb66e1c7bad1cb41befc57fd8fcfa8704ae78362a4e306e2461",
-    title: "GEMINI ",
-    category: "Web Design",
-    href: "/post",
+    title: "Dataleed",
+    category: "UI Design",
+    href: "/work/Dataleed - Work With Ddigital_compressed.pdf",
   },
   {
     imageSrc:
       "https://img.freepik.com/fre-psd/business-company-landing-page-template_23-2148924995.jpg?w=1380&t=st=1688964129~exp=1688964729~hmac=5f4f1a1d5e243dc998ee58c745e139b8f5299bfcf261fc33b35e633c3c7a5d49",
     hoverImageSrc:
       "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg?w=826&t=st=1688963719~exp=1688964319~hmac=1beb954c72a77cb66e1c7bad1cb41befc57fd8fcfa8704ae78362a4e306e2461",
-    title: "GEMINI SKINCARE",
-    category: "Web Design",
-    href: "/post",
+    title: "Monster",
+    category: "UI Design",
+    href: "/work/Monster - Work With Ddigital_compressed.pdf",
   },
   {
     imageSrc:
       "https://img.freepik.com/fre-psd/business-company-landing-page-template_23-2148924995.jpg?w=1380&t=st=1688964129~exp=1688964729~hmac=5f4f1a1d5e243dc998ee58c745e139b8f5299bfcf261fc33b35e633c3c7a5d49",
     hoverImageSrc:
       "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg?w=826&t=st=1688963719~exp=1688964319~hmac=1beb954c72a77cb66e1c7bad1cb41befc57fd8fcfa8704ae78362a4e306e2461",
-    title: "GEMINI SKINCARE",
-    category: "Web Design",
-    href: "/post",
+    title: "Yeti",
+    category: "Illustrations",
+    href: "/work/Yeti - Work With Ddigital_compressed.pdf",
   },
   {
     imageSrc:
       "https://img.freepik.com/fre-psd/business-company-landing-page-template_23-2148924995.jpg?w=1380&t=st=1688964129~exp=1688964729~hmac=5f4f1a1d5e243dc998ee58c745e139b8f5299bfcf261fc33b35e633c3c7a5d49",
     hoverImageSrc:
       "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg?w=826&t=st=1688963719~exp=1688964319~hmac=1beb954c72a77cb66e1c7bad1cb41befc57fd8fcfa8704ae78362a4e306e2461",
-    title: "GEMINI SKINCARE",
-    category: "Web Design",
-    href: "/post",
+    title: "EhaKade",
+    category: "Branding",
+    href: "/work/EhaKade - Work With Ddigital_compressed.pdf",
   },
   {
     imageSrc:
       "https://img.freepik.com/fre-psd/business-company-landing-page-template_23-2148924995.jpg?w=1380&t=st=1688964129~exp=1688964729~hmac=5f4f1a1d5e243dc998ee58c745e139b8f5299bfcf261fc33b35e633c3c7a5d49",
     hoverImageSrc:
       "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg?w=826&t=st=1688963719~exp=1688964319~hmac=1beb954c72a77cb66e1c7bad1cb41befc57fd8fcfa8704ae78362a4e306e2461",
-    title: "GEMINI SKINCARE",
-    category: "Web Design",
-    href: "/post",
+    title: "Ceylumin",
+    category: "Photography",
+    href: "/work/Ceylumin - Work With Ddigital_compressed.pdf",
   },
   {
     imageSrc:
       "https://img.freepik.com/fre-psd/business-company-landing-page-template_23-2148924995.jpg?w=1380&t=st=1688964129~exp=1688964729~hmac=5f4f1a1d5e243dc998ee58c745e139b8f5299bfcf261fc33b35e633c3c7a5d49",
     hoverImageSrc:
       "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg?w=826&t=st=1688963719~exp=1688964319~hmac=1beb954c72a77cb66e1c7bad1cb41befc57fd8fcfa8704ae78362a4e306e2461",
-    title: "GEMINI SKINCARE",
-    category: "Web Design",
-    href: "/post",
+    title: "Codezela",
+    category: "Illustrations",
+    href: "/work/Codezela Illustrations - Work With Ddigital_compressed.pdf",
   },
 ];
 
@@ -145,16 +144,18 @@ export default function WorkSection() {
                     className="flex flex-col items-center justify-center h-96 w-96 rounded-xl"
                     style={{ backgroundImage: `url(${data.imageSrc})` }}
                   >
-                    <div className="inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity m-6">
-                      <Image
-                        className="object-cover rounded-xl w-80 h-80"
-                        src={data.hoverImageSrc}
-                        alt="Hover Image Description"
-                        width={500}
-                        height={500}
-                        loading="lazy"
-                      />
-                    </div>
+                    <Link href={data.href} target="_blank">
+                      <div className="inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity m-6">
+                        <Image
+                          className="object-cover rounded-xl w-80 h-80"
+                          src={data.hoverImageSrc}
+                          alt="Hover Image Description"
+                          width={500}
+                          height={500}
+                          loading="lazy"
+                        />
+                      </div>
+                    </Link>
                   </div>
                   <div className="flex flex-col">
                     <div className="text-xl text-black font-bold mt-5">
