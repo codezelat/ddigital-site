@@ -92,7 +92,7 @@ export default function WorkSection() {
         </div>
         <div className="lg:w-1/3">
           <div className=" text-lg lg:text-3xl text-black font-semibold flex items-center justify-center float-left lg:float-right">
-            <Link href="/all-projects">
+            {/* <Link href="/all-projects">
               <FontAwesomeIcon
                 icon={faArrowRight}
                 className="bg-black rounded-2xl text-white p-3 lg:p-4 mr-4"
@@ -100,7 +100,7 @@ export default function WorkSection() {
                 width={24}
               />
               Explore All Projects
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

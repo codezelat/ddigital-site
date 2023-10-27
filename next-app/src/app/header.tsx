@@ -5,7 +5,7 @@ import Link from "next/link";
 import { MouseEvent, useEffect, useState } from "react";
 
 const navigationLinks = [
-  { url: "/", title: "Home", isActive: true },
+  { url: "/header", title: "Home", isActive: true },
   { url: "/services", title: "Services" },
   { url: "/projects", title: "Work" },
   { url: "/contact", title: "Contact" },
@@ -20,7 +20,7 @@ export default function Header() {
   useEffect(() => {
     const handleScrollToElement = (
       e: MouseEvent<HTMLAnchorElement>,
-      id: string,
+      id: string
     ) => {
       e.preventDefault();
       const targetElement = document.querySelector(`#${id}`);
@@ -52,6 +52,7 @@ export default function Header() {
       className={`fixed top-0 left-0 right-0 z-50 items-center rounded-3xl bg-white backdrop-blur-10 m-5 shadow-2xl mx-12 ${
         isHideOnMobileVisible ? "bg-opacity-100" : "bg-opacity-80"
       }`}
+      id="header"
     >
       <div className="flex flex-col lg:flex-row justify-between items-center px-4">
         <div className="flex items-center justify-center m-5">

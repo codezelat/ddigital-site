@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
 export default function HeroSection() {
-  const texts = ["Stand Out", "Impress", "Wow", "Rebel"];
+  const texts = ["Stand Out", "Succeed", "Wow", "Convert"];
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
 
   useEffect(() => {
@@ -18,7 +18,10 @@ export default function HeroSection() {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row p-0 lg:p-5 m-2 sm:m-5 mt-40 md:mt-60 lg:mt-40">
+      <div
+        className="flex flex-col md:flex-row p-0 lg:p-5 m-2 sm:m-5 mt-40 md:mt-60 lg:mt-40"
+        id="home"
+      >
         <div className="w-full lg:w-2/3 text-center md:text-start">
           <p className="text-6xl md:text-7xl lg:text-9xl mb-4 font-semibold">
             Designs
@@ -31,7 +34,7 @@ export default function HeroSection() {
         <div className="w-full lg:w-1/3 ">
           <div className="h-full flex items-center justify-center lg:justify-left">
             <Link
-              href="#about-video"
+              href="#about-video-player"
               className="p-2 mx-4 text-4xl lg:text-7xl text-white font-semibold bg-black rounded-full flex items-center justify-center w-36 h-36 lg:w-48 lg:h-48 mt-6 lg:mt-0 "
             >
               <FontAwesomeIcon icon={faPlay} height={120} width={120} beat />
@@ -42,8 +45,9 @@ export default function HeroSection() {
       <div className="flex flex-col lg:flex-row mt-10">
         <div className="w-full lg:w-3/5 hidden sm:block "></div>
         <div className="w-full lg:w-1/3 text-xl lg:text-2xl">
-          At D. Digital, we develop eye-catching brands, design beautiful
-          websites, and deliver campaigns that stand out from the norm.
+          At Ddigital, our mission is to provide small businesses and startups
+          in Sri Lanka with accessible, high-quality design and digital media
+          solutions that propel their growth.
         </div>
       </div>
     </>

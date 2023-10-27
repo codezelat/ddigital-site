@@ -7,22 +7,25 @@ export default function AboutSection() {
     <div id="about" className="flex flex-col lg:flex-row mt-16 m-0 sm:m-5">
       <div className=" lg:w-3/5 bg-black text-white rounded-xl lg:m-5 p-5 shadow-2xl">
         <h2 className="text-3xl lg:text-4xl font-semibold text-center mt-12">
-          About
+          Who We Are
         </h2>
-        <p className="text-lg text-center">I am a subway</p>
-        <p className="text-lg lg:text-xl mb-4 font-md text-justify mt-5 lg:m-10">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+        <p className="text-lg lg:text-xl text-center mt-2">
+          Digitally Designed, Diversely Developed, Dedicated to Excellence!
+        </p>
+        <p className="text-md lg:text-lg mb-4 font-md text-justify mt-4 lg:m-6">
+          <span className="font-semibold">Ddigital</span> is a dynamic design
+          agency and digital media services provider based in the vibrant heart
+          of Colombo, Sri Lanka. Our journey is deeply intertwined with the rich
+          heritage and innovative spirit of this beautiful island nation. Our
+          Vision is to be the catalyst for transformation in the digital
+          landscape of Sri Lanka, empowering small businesses and startups with
+          affordable, industry-grade design and digital media services. We
+          aspire to nurture and elevate fresh talent, bridging the gap between
+          creativity and professionalism, while leaving an indelible mark of
+          success on our clients&apos; endeavors.
         </p>
       </div>
-      <div className="lg:w-2/5 bg-black text-white items-center justify-center rounded-xl lg:m-5 p-5 shadow-2xl">
+      <div className="lg:w-2/5 mt-20 lg:mt-5 bg-black text-white items-center justify-center rounded-xl lg:m-5 p-5 shadow-2xl">
         <LiteYouTubeEmbed
           id="A90XpRc5ke0"
           title="Ddigital - Your One-Spot Digital Media Hub"
@@ -30,6 +33,7 @@ export default function AboutSection() {
           webp
         />
       </div>
+      <div id="about-video-player" className="d-none"></div>
     </div>
   );
 }

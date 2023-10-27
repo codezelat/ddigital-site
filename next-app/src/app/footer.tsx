@@ -7,35 +7,42 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5">
           <div className="text-center sm:text-start col-span-3">
             <ul className="list-none text-4xl p-8 m-0">
-              We liberate our clients
+              We dedicate ourselves to helping
               <br />
-              to dream big with their
-              <br /> brand.
+              <span className="font-bold">Businesses </span>
+              to achieve <span className="font-bold">Excellence</span>
+              <br />
+              with their brand.
             </ul>
           </div>
           <div className="text-center sm:text-start">
             <ul className="list-none text-sm p-8 m-0">
               <li className="mb-4 text-xl">
-                <Link href="#">Services</Link>
+                <Link href="#services">Services</Link>
               </li>
               <li className="mb-4 text-xl">
-                <Link href="#">Work</Link>
+                <Link href="#work">Work</Link>
               </li>
               <li className="mb-4 text-xl">
-                <Link href="#">About</Link>
+                <Link href="#about">About</Link>
               </li>
             </ul>
           </div>
           <div className="text-center sm:text-start">
             <ul className="list-none text-sm p-8 m-0">
-              <li className="mb-4 text-xl">
+              {/* <li className="mb-4 text-xl">
                 <Link href="#">Blog</Link>
+              </li> */}
+              <li className="mb-4 text-xl">
+                <Link href="#contact">Contact</Link>
               </li>
               <li className="mb-4 text-xl">
-                <Link href="#">Contact</Link>
-              </li>
-              <li className="mb-4 text-xl">
-                <Link href="#">Privacy Policy</Link>
+                <Link
+                  href="https://codezela.com/privacy-policy"
+                  target="_blank"
+                >
+                  Privacy Policy
+                </Link>
               </li>
             </ul>
           </div>
@@ -46,54 +53,63 @@ export default function Footer() {
           <div className="text-center sm:text-start">
             <ul className="list-none text-sm p-8 m-0">
               <li className="mb-2 text-xl">
-                <Link href="#">Contact Us</Link>
+                <Link href="mailto:ddigital.lk@gmail.com">Email Us</Link>
+              </li>
+              <li className="mb-2 text-xl">
+                <Link href="tel:+94727333577">Call Us</Link>
               </li>
             </ul>
           </div>
           <div className="text-center sm:text-start">
             <ul className="list-none text-sm p-8 m-0">
-              <li className="mb-2 text-xl">
+              {/* <li className="mb-2 text-xl">
                 <Link href="#">Join Our Team</Link>
+              </li> */}
+              <li className="mb-2 text-xl">
+                <Link href="https://codezela.com">Codezela Tech.</Link>
               </li>
               <li className="mb-2 text-xl">
-                <Link href="#">Cookies Settings</Link>
-              </li>
-              <li className="mb-2 text-xl">
-                <Link href="#">Codezela Group</Link>
+                <Link href="https://sparks.codezela.com">
+                  Sparks by Codezela
+                </Link>
               </li>
             </ul>
           </div>
           <div className="text-center sm:text-start">
             <ul className="list-none text-sm p-8 m-0">
               <li className="mb-2 text-xl">
-                <Link href="#">Facebook</Link>
+                <Link href="https://twitter.com/ddigital_lk/">X</Link>
               </li>
               <li className="mb-2 text-xl">
-                <Link href="#">Instagram</Link>
+                <Link href="https://www.instagram.com/ddigital.lk/">
+                  Instagram
+                </Link>
               </li>
               <li className="mb-2 text-xl">
-                <Link href="#">Flicker</Link>
+                <Link href="https://www.facebook.com/ddigital.lk/">
+                  Facebook
+                </Link>
               </li>
             </ul>
           </div>
           <div className="text-center sm:text-start">
             <ul className="list-none text-sm p-8 m-0">
-              <li className="mb-2 text-xl">
-                FLönnrotinkatu 18
-                <br />
-                00120 Helsinki
-                <br />
-                Yliopistonkatu 31
-                <br />
-                20100 Turku
-              </li>
+              <Link href="https://maps.app.goo.gl/y5d1XGWWeN8Q2qFB8">
+                <li className="mb-2 text-xl">
+                  36, Brahmanagama,
+                  <br />
+                  Pannipitiya, 10230,
+                  <br />
+                  LK
+                </li>
+              </Link>
             </ul>
           </div>
         </div>
         <div className="p-8 text-center sm:text-center">
-          <div className="text-6xl font-bold text-white mb-6">DDigital</div>
+          <div className="text-6xl font-bold text-white mb-6">Ddigital</div>
           <div className="text-sm text-white mb-6">
-            Copyright &copy; {new Date().getFullYear()} | DDigital Designs
+            Copyright &copy; {new Date().getFullYear()} | Ddigital
           </div>
         </div>
       </div>
