@@ -2,44 +2,44 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHeart,
+  faQuoteRightAlt,
+  faQuoteLeftAlt,
+} from "@fortawesome/free-solid-svg-icons";
 
 const testimonials = [
   {
     id: 1,
     quote:
-      "Loved working with Zorro! As a novice in setting up a website, the Zorro team was extremely patient with our team and adapted to all the pivots. Our site came out phenomenal, and we could not be more pleased.",
-    author: "John Doe",
-    title: "Founder | Yuno Botanicals",
-    image:
-      "https://img.freepik.com/free-vector/goat-logo-design-template_23-2150443193.jpg?w=740&t=st=1688967812~exp=1688968412~hmac=e23e2a5ca8e7ee753d1b633e8460683a06289f61a2ffea7a503a7d4d40497247",
+      "Thanks to Ddigital, our premium cinnamon oil now stands out like never before. Their creative touch and attention to detail made all the difference. The marketing materials they designed exceeded our expectations and have driven real results. We couldn't be happier with their work!",
+    author: "Sayon De Silva",
+    title: "Founder | Ceylumin",
+    image: "/img/clients/ceylumin.png",
   },
   {
     id: 2,
     quote:
-      "Highly recommend Zorro for their exceptional service and top-notch expertise. The team went above and beyond to ensure our project's success. We're extremely satisfied with the results!",
-    author: "Jane Smith",
-    title: "CEO | ABC Corporation",
-    image:
-      "https://img.freepik.com/free-vector/goat-logo-design-template_23-2150443193.jpg?w=740&t=st=1688967812~exp=1688968412~hmac=e23e2a5ca8e7ee753d1b633e8460683a06289f61a2ffea7a503a7d4d40497247",
+      "Ddigital took our vision and brought it to life with their creative branding and graphic designs. They've given Rumikmart a unique and appealing identity. We highly recommend their services!",
+    author: "Kalana Erandika",
+    title: "Founder | Rumikmart",
+    image: "/img/clients/rumikmart.png",
   },
   {
     id: 3,
     quote:
-      "Working with Zorro was a game-changer for our business. Their attention to detail and creative approach transformed our online presence. We're now seeing significant growth in our customer base. Thank you, Zorro!",
-    author: "David Johnson",
-    title: "Co-Founder | XYZ Solutions",
-    image:
-      "https://img.freepik.com/free-vector/goat-logo-design-template_23-2150443193.jpg?w=740&t=st=1688967812~exp=1688968412~hmac=e23e2a5ca8e7ee753d1b633e8460683a06289f61a2ffea7a503a7d4d40497247",
+      "Ddigital's designs have taken our online presence to the next level. They've created stunning graphics and social media content that truly engage our audience. Their team members have been a pleasure to work with and we look forward to continuing our partnership.",
+    author: "Cader Rahmathulla",
+    title: "CEO | SITC Campus",
+    image: "/img/clients/sitc.png",
   },
   {
     id: 4,
     quote:
-      "Zorro exceeded our expectations in every way. Their professionalism, communication, and expertise made the entire process seamless. We're thrilled with the outcome and look forward to future collaborations.",
-    author: "Sarah Wilson",
-    title: "Marketing Director | PQR Industries",
-    image:
-      "https://img.freepik.com/free-vector/goat-logo-design-template_23-2150443193.jpg?w=740&t=st=1688967812~exp=1688968412~hmac=e23e2a5ca8e7ee753d1b633e8460683a06289f61a2ffea7a503a7d4d40497247",
+      "Ddigital's digital illustrations and character designs have been a game-changer for our brand. Their creativity and attention to detail shine through in their work. It's really exciting to have such a talented team under our team.",
+    author: "Chanuka Wijesinghe",
+    title: "DMA Executive | Codezela",
+    image: "/img/clients/codezela.png",
   },
 ];
 
@@ -50,7 +50,7 @@ export default function TestimonialsSection() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentCommentIndex(
-        (prevIndex) => (prevIndex + 1) % testimonials.length,
+        (prevIndex) => (prevIndex + 1) % testimonials.length
       );
     }, 3000);
 
@@ -61,14 +61,13 @@ export default function TestimonialsSection() {
 
   const handlePrevComment = () => {
     setCurrentCommentIndex(
-      (prevIndex) =>
-        (prevIndex - 1 + testimonials.length) % testimonials.length,
+      (prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length
     );
   };
 
   const handleNextComment = () => {
     setCurrentCommentIndex(
-      (prevIndex) => (prevIndex + 1) % testimonials.length,
+      (prevIndex) => (prevIndex + 1) % testimonials.length
     );
   };
 
@@ -86,8 +85,20 @@ export default function TestimonialsSection() {
               beat
             />
           </h2>
-          <p className="text-lg lg:text-3xl mb-2 md:mb-0 lg:mb-8 font-md h-48">
-            {`&ldquo;${currentComment.quote}&rdquo;`}
+          <p className="text-lg lg:text-3xl mb-2 md:mb-0 lg:mb-8 font-medium h-48">
+            <FontAwesomeIcon
+              icon={faQuoteLeftAlt}
+              height={80}
+              width={80}
+              className="text-black-300"
+            />
+            {`${currentComment.quote}`}
+            <FontAwesomeIcon
+              icon={faQuoteRightAlt}
+              height={80}
+              width={80}
+              className="text-black-300"
+            />
           </p>
           <div className="flex lg:flex-row items-center pt-12 md:pt-0 lg:pt-0">
             <div className="flex flex-col">
@@ -98,7 +109,7 @@ export default function TestimonialsSection() {
             </div>
             <div className="lg:w-1/3 flex flex-col ml-5 lg:ml-24">
               <Image
-                className="h-28 w-28 float-right"
+                className="h-20 w-32 float-right object-contain"
                 src={currentComment.image}
                 alt="Logo"
                 width={100}

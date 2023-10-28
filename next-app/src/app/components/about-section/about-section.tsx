@@ -5,12 +5,12 @@ import "./about-section.modules.css";
 export default function AboutSection() {
   return (
     <div id="about" className="flex flex-col lg:flex-row mt-16 m-0 sm:m-5">
-      <div className=" lg:w-3/5 bg-black text-white rounded-xl lg:m-5 p-5 shadow-2xl">
+      <div className=" lg:w-3/5 bg-[#222222] text-white rounded-xl lg:m-5 p-5 shadow-2xl">
         <h2 className="text-3xl lg:text-4xl font-semibold text-center mt-12">
           Who We Are
         </h2>
         <p className="text-lg lg:text-xl text-center mt-2">
-          Digitally Designed, Diversely Developed, Dedicated to Excellence!
+          &ldquo;Digitally Designed, Diversely Developed, Dedicated to Excellence!&rdquo;
         </p>
         <p className="text-md lg:text-lg mb-4 font-md text-justify mt-4 lg:m-6">
           <span className="font-semibold">Ddigital</span> is a dynamic design

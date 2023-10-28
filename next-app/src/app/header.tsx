@@ -57,7 +57,7 @@ export default function Header() {
       <div className="flex flex-col lg:flex-row justify-between items-center px-4">
         <div className="flex items-center justify-center m-5">
           <Link href="./">
-            <div className="text-4xl font-bold mr-4 font-kalam">DDigital</div>
+            <div className="text-4xl font-bold mr-4 font-kalam">Ddigital</div>
           </Link>
           <Link
             href="#"
