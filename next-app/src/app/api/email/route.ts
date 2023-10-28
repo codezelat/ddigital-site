@@ -10,6 +10,11 @@ export async function POST(request: NextRequest) {
       { error: "Please fill in all fields" },
       { status: 400 }
     );
+  } else if (!email.includes("@") || !email.includes(".")) {
+    return NextResponse.json(
+      { error: "Please enter a valid email address" },
+      { status: 400 }
+    );
   }
 
   const transport = nodemailer.createTransport({

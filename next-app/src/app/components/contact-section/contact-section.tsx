@@ -21,8 +21,13 @@ export default function ContactSection() {
     if (name === "" || name === null) {
       toast.error("Please enter your name");
       return;
-    } else if (email === "" || email === null) {
-      toast.error("Please enter your email");
+    } else if (
+      email === "" ||
+      email === null ||
+      !email.includes("@") ||
+      !email.includes(".")
+    ) {
+      toast.error("Please enter a valid email");
       return;
     } else if (subject === "" || subject === null) {
       toast.error("Please enter the subject");
