@@ -120,16 +120,26 @@ export default function WorkSection() {
           {worksData.map((data, index) => (
             <SwiperSlide key={index}>
               <>
-                <div className="flex flex-col relative  items-center text-center ">
+                <div className="flex flex-col items-center text-center">
                   <div className="absolute left-[55%] top-[15%] bg-black text-white text-md text-center font-semibold px-3 py-3 rounded-md z-40 w-32">
                     {data.category}
                   </div>
-                  <div
-                    className="flex flex-col bg-center bg-cover items-center justify-center h-96 w-96 rounded-xl"
-                    style={{ backgroundImage: `url(${data.imageSrc})` }}
-                  >
-                    <Link href={data.href} target="_blank">
-                      <div className="inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity m-6">
+                  <div className="flex flex-col bg-center bg-cover items-center justify-center">
+                    <Image
+                      className="rounded-xl"
+                      src={data.imageSrc}
+                      alt="Hover Image Description"
+                      width={500}
+                      height={500}
+                      loading="lazy"
+                      objectFit="cover"
+                    />
+                    <Link
+                      href={data.href}
+                      target="_blank"
+                      className="-mt-[100%]"
+                    >
+                      <div className="inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity m-4 md:m-6">
                         <Image
                           className="object-cover rounded-xl w-95 h-95"
                           src={data.hoverImageSrc}

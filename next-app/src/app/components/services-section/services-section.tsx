@@ -83,7 +83,7 @@ export default function ServicesSection() {
           key={index + 1}
         >
           <div
-            className={`outer-service-div flex flex-col lg:flex-row bg-white rounded-xl p-8 w-full h-96 bg-no-repeat bg-cover bg-center`}
+            className={`outer-service-div flex flex-col justify-end lg:justify-start lg:flex-row bg-white rounded-xl p-8 w-full h-96 bg-no-repeat bg-cover bg-center`}
             style={{
               backgroundImage: `url("${service.imageUrl1}")`,
             }}
@@ -91,12 +91,12 @@ export default function ServicesSection() {
             onMouseLeave={() => handleMouseLeave()}
           >
             <div className="lg:w-2/3 flex flex-col items-center justify-center bg-black bg-opacity-50 p-10 rounded-xl w-fit">
-              <span className="text-5xl lg:text-7xl font-semibold text-center text-white mb-8">
+              <span className="text-3xl lg:text-7xl font-semibold text-center text-white mb-8">
                 {service.title}
               </span>
               <Link
                 href={`${service.link}`}
-                className="text-xl lg:text-2xl font-semibold flex items-center text-center text-white"
+                className="text-md lg:text-2xl font-semibold flex items-center text-center text-white"
               >
                 <FontAwesomeIcon
                   icon={faArrowRight}
@@ -110,19 +110,19 @@ export default function ServicesSection() {
           </div>
 
           <div
-            className={`inner-service-div absolute top-0 left-0 flex flex-col lg:flex-row bg-[#222222] rounded-xl items-center content-center p-4 md:p-8 border-0 w-full h-96 ${
+            className={`inner-service-div absolute top-0 left-0 flex flex-col lg:flex-row bg-[#222222] rounded-xl items-center justify-center content-center p-4 md:p-8 border-0 w-full h-96 ${
               showInnerDiv === index ? styles.hideInnerDiv : styles.showInnerDiv
             }`}
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave()}
           >
-            <div className="lg:w-1/3 justify-center items-center m-2 rounded-xl content-center flex">
+            <div className="lg:w-1/3 justify-center items-center m-2 rounded-xl content-center flex p-4">
               <Image
-                className="rounded-xl"
+                className="rounded-xl w-80 h-56 lg:h-72 object-contain"
                 src={`${service.imageUrl2}`}
                 alt="Image Description"
-                width={300}
-                height={300}
+                width={200}
+                height={200}
               />
             </div>
             <div className="lg:w-2/3 flex flex-col justify-center items-center">

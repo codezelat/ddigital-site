@@ -133,7 +133,7 @@ export default function ContactSection() {
               </div>
               <button
                 type="button"
-                className="w-full py-8 px-5 text-sm font-semibold text-center text-black rounded-lg bg-white sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 hover:text-white hover:border-b-2 hover:bg-gray-900 focus:ring-black block lg:hidden"
+                className="w-full py-8 px-5 text-sm font-semibold text-center text-black rounded-lg bg-white hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 hover:text-white hover:border-b-2 hover:bg-gray-900 focus:ring-black block lg:hidden"
                 onClick={handleSubmission}
               >
                 Send message

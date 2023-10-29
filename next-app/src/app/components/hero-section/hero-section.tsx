@@ -19,10 +19,10 @@ export default function HeroSection() {
   return (
     <>
       <div
-        className="flex flex-col md:flex-row p-0 lg:p-5 m-2 sm:m-5 mt-40 md:mt-60 lg:mt-40"
+        className="flex flex-col md:flex-row p-0 lg:p-5 m-2 sm:m-5 mt-40 md:mt-60 lg:mt-40 min-h-[50vh]"
         id="home"
       >
-        <div className="w-full lg:w-2/3 text-center md:text-start">
+        <div className="w-full lg:w-2/3 text-center md:text-start flex flex-col justify-center">
           <p className="text-6xl md:text-7xl lg:text-9xl mb-4 font-semibold">
             Designs
           </p>
@@ -44,7 +44,7 @@ export default function HeroSection() {
       </div>
       <div className="flex flex-col lg:flex-row mt-10">
         <div className="w-full lg:w-3/5 hidden sm:block "></div>
-        <div className="w-full lg:w-1/3 text-xl lg:text-2xl">
+        <div className="w-full lg:w-1/3 text-xl lg:text-2xl mx-4 md:mx-6 lg:mx-0">
           At Ddigital, our mission is to provide small businesses and startups
           in Sri Lanka with accessible, high-quality design and digital media
           solutions that propel their growth.

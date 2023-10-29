@@ -72,7 +72,7 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <div id="feedback" className="m-0 sm:m-10 mt-20 lg:mt-32 lg:pb-20">
+    <div id="feedback" className="m-2 sm:m-10 mt-20 lg:mt-32 lg:p-5 lg:pb-20">
       <div className="flex flex-col lg:flex-row">
         <div className="lg:w-3/4">
           <h2 className="flex items-center text-4xl md:text-6xl lg:text-8xl mb-12 md:mb-12 sm:mb-32 font-semibold s-full sm:w-2/3 ">

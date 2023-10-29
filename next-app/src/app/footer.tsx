@@ -2,11 +2,11 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="items-center bg-black text-white mt-32 px-10">
+    <footer className="items-center bg-black text-white mt-32 px-4 lg:px-10">
       <div className="lg:p-5">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5">
           <div className="text-center sm:text-start col-span-3">
-            <ul className="list-none text-4xl p-8 m-0">
+            <ul className="list-none text-3xl lg:text-4xl p-8 m-0">
               We dedicate ourselves to helping
               <br />
               <span className="font-bold">Businesses </span>
@@ -15,7 +15,7 @@ export default function Footer() {
               with their brand.
             </ul>
           </div>
-          <div className="text-center sm:text-start">
+          <div className="text-center sm:text-start col-span-3 md:col-span-1">
             <ul className="list-none text-sm p-8 m-0">
               <li className="mb-4 text-xl">
                 <Link href="#services">Services</Link>
@@ -28,7 +28,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="text-center sm:text-start">
+          <div className="text-center sm:text-start col-span-3 md:col-span-1">
             <ul className="list-none text-sm p-8 m-0">
               {/* <li className="mb-4 text-xl">
                 <Link href="#">Blog</Link>
@@ -58,13 +58,13 @@ export default function Footer() {
               <li className="mb-2 text-xl">
                 <Link href="tel:+94727333577">Call Us</Link>
               </li>
+              <li className="mb-2 text-xl">
+                <Link href="https://wa.me/+94727333577/">WhatsApp Us</Link>
+              </li>
             </ul>
           </div>
           <div className="text-center sm:text-start">
             <ul className="list-none text-sm p-8 m-0">
-              {/* <li className="mb-2 text-xl">
-                <Link href="#">Join Our Team</Link>
-              </li> */}
               <li className="mb-2 text-xl">
                 <Link href="https://codezela.com">Codezela Tech.</Link>
               </li>
@@ -86,8 +86,16 @@ export default function Footer() {
                 </Link>
               </li>
               <li className="mb-2 text-xl">
+                <Link href="https://www.tiktok.com/@ddigital.lk/">TikTok</Link>
+              </li>
+              <li className="mb-2 text-xl">
                 <Link href="https://www.facebook.com/ddigital.lk/">
                   Facebook
+                </Link>
+              </li>
+              <li className="mb-2 text-xl">
+                <Link href="https://www.youtube.com/@ddigital_lk/">
+                  Youtube
                 </Link>
               </li>
             </ul>
@@ -96,9 +104,9 @@ export default function Footer() {
             <ul className="list-none text-sm p-8 m-0">
               <Link href="https://maps.app.goo.gl/y5d1XGWWeN8Q2qFB8">
                 <li className="mb-2 text-xl">
-                  36, Brahmanagama,
+                  Pannipitiya,
                   <br />
-                  Pannipitiya, 10230,
+                  10230,
                   <br />
                   LK
                 </li>
@@ -107,7 +115,9 @@ export default function Footer() {
           </div>
         </div>
         <div className="p-8 text-center sm:text-center">
-          <div className="text-6xl font-bold text-white mb-6">Ddigital</div>
+          <Link href="./">
+            <div className="text-6xl font-bold text-white mb-6">Ddigital</div>
+          </Link>
           <div className="text-sm text-white mb-6">
             Copyright &copy; {new Date().getFullYear()} | Ddigital
           </div>
