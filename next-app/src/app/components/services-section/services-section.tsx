@@ -11,35 +11,35 @@ const servicesData = [
     title: "Branding",
     imageUrl1: "/img/services-hover/1.jpg",
     imageUrl2: "/img/services/1.svg",
-    link: "/",
+    link: "https://bit.ly/branding-with-ddigital",
     isHovered: false,
   },
   {
     title: "Graphic Design",
     imageUrl1: "/img/services-hover/2.jpg",
     imageUrl2: "/img/services/2.svg",
-    link: "/",
+    link: "https://bit.ly/graphic-design-with-ddigital",
     isHovered: false,
   },
   {
     title: "Packaging Design",
     imageUrl1: "/img/services-hover/3.jpg",
     imageUrl2: "/img/services/3.svg",
-    link: "/",
+    link: "https://bit.ly/packaging-design-with-ddigital",
     isHovered: false,
   },
   {
     title: "Creative Content",
     imageUrl1: "/img/services-hover/4.jpg",
     imageUrl2: "/img/services/4.svg",
-    link: "/",
+    link: "https://bit.ly/creative-content-with-ddigital",
     isHovered: false,
   },
   {
     title: "Photography and Videography",
     imageUrl1: "/img/services-hover/5.jpg",
     imageUrl2: "/img/services/5.svg",
-    link: "/",
+    link: "https://bit.ly/photography-and-videography-with-ddigital",
     isHovered: false,
   },
 ];
@@ -83,15 +83,20 @@ export default function ServicesSection() {
           key={index + 1}
         >
           <div
-            className={`outer-service-div flex flex-col justify-end lg:justify-start lg:flex-row bg-white rounded-xl p-8 w-full h-96 bg-no-repeat bg-cover bg-center`}
-            style={{
-              backgroundImage: `url("${service.imageUrl1}")`,
-            }}
+            className={`outer-service-div relative flex flex-col justify-end lg:justify-start items-center lg:flex-row bg-white rounded-xl w-full h-96`}
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave()}
           >
-            <div className="lg:w-2/3 flex flex-col items-center justify-center bg-black bg-opacity-50 p-10 rounded-xl w-fit">
-              <span className="text-3xl lg:text-7xl font-semibold text-center text-white mb-8">
+            <Image
+              className="rounded-xl"
+              src={`${service.imageUrl1}`}
+              alt={service.title}
+              loading="lazy"
+              objectFit="cover"
+              layout="fill"
+            />
+            <div className="z-20 h-fit md:w-2/3 flex flex-col items-center justify-center bg-black bg-opacity-50 px-10 py-16 rounded-xl w-fit">
+              <span className="text-3xl md:text-4xl lg:text-7xl font-semibold text-center text-white mb-8">
                 {service.title}
               </span>
               <Link
@@ -110,7 +115,7 @@ export default function ServicesSection() {
           </div>
 
           <div
-            className={`inner-service-div absolute top-0 left-0 flex flex-col lg:flex-row bg-[#222222] rounded-xl items-center justify-center content-center p-4 md:p-8 border-0 w-full h-96 ${
+            className={`z-30 inner-service-div absolute top-0 left-0 flex flex-col lg:flex-row bg-[#222222] rounded-xl items-center justify-center content-center p-4 md:p-8 border-0 w-full h-96 ${
               showInnerDiv === index ? styles.hideInnerDiv : styles.showInnerDiv
             }`}
             onMouseEnter={() => handleMouseEnter(index)}
