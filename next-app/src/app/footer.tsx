@@ -73,6 +73,14 @@ export default function Footer() {
                   Sparks by Codezela
                 </Link>
               </li>
+              <li className="mb-2 text-xl">
+                <Link href="https://www.instagram.com/ddigital.lk/">
+                  Instagram
+                </Link>
+              </li>
+              <li className="mb-2 text-xl">
+                <Link href="https://www.tiktok.com/@ddigital.lk/">TikTok</Link>
+              </li>
             </ul>
           </div>
           <div className="text-center sm:text-start">
@@ -81,12 +89,7 @@ export default function Footer() {
                 <Link href="https://twitter.com/ddigital_lk/">X</Link>
               </li>
               <li className="mb-2 text-xl">
-                <Link href="https://www.instagram.com/ddigital.lk/">
-                  Instagram
-                </Link>
-              </li>
-              <li className="mb-2 text-xl">
-                <Link href="https://www.tiktok.com/@ddigital.lk/">TikTok</Link>
+                <Link href="https://www.threads.net/@ddigital.lk">Threads</Link>
               </li>
               <li className="mb-2 text-xl">
                 <Link href="https://www.facebook.com/ddigital.lk/">

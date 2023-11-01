@@ -7,7 +7,7 @@ import { MouseEvent, useEffect, useState } from "react";
 const navigationLinks = [
   { url: "/header", title: "Home", isActive: true },
   { url: "/services", title: "Services" },
-  { url: "/projects", title: "Work" },
+  { url: "/work", title: "Work" },
   // { url: "/contact", title: "Contact" },
 ];
 

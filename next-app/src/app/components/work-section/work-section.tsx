@@ -77,21 +77,21 @@ const worksData = [
 
 export default function WorkSection() {
   return (
-    <div id="projects" className="lg:p-5 m-2 sm:m-5 mt-24 md:mt-28 lg:mt-32">
+    <div id="work" className="lg:p-5 m-2 sm:m-5 mt-24 md:mt-28 lg:mt-32">
       <div className="flex flex-col lg:flex-row mb-6 ">
         <div className="lg:w-2/3 ">
           <h1 className="text-4xl lg:text-5xl mb-4 font-semibold">Our Work</h1>
         </div>
         <div className="lg:w-1/3">
           <div className=" text-lg lg:text-3xl text-black font-semibold flex items-center justify-center float-left lg:float-right">
-            {/* <Link href="/all-projects">
+            {/* <Link href="/all-work">
               <FontAwesomeIcon
                 icon={faArrowRight}
                 className="bg-black rounded-2xl text-white p-3 lg:p-4 mr-4"
                 height={24}
                 width={24}
               />
-              Explore All Projects
+              Explore All Work
             </Link> */}
           </div>
         </div>
