@@ -60,7 +60,7 @@ export default function Header() {
             <div className="text-4xl font-bold mr-4 font-kalam">Ddigital</div>
           </Link>
           <Link
-            href="#"
+            href="#contact"
             className="md:hidden p-4 ml-4 text-lg text-white font-semibold bg-black rounded-full flex items-center justify-center"
             style={{ width: "48px", height: "48px" }}
           >
