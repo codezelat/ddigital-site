@@ -12,7 +12,7 @@ const testimonials = [
   {
     id: 1,
     quote:
-      "Thanks to Ddigital, our premium cinnamon oil now stands out like never before. Their creative touch and attention to detail made all the difference. The marketing materials they designed exceeded our expectations and have driven real results. We couldn't be happier with their work!",
+      "Thanks to Ddigital, our premium cinnamon oil now stands out online like never before. Their creative touch and attention to detail during UI design and photography made a difference. The final outcome they designed exceeded our expectations and have driven real results. Thank you team for the great work!",
     author: "Sayon De Silva",
     title: "Founder | Ceylumin",
     image: "/img/clients/ceylumin.png",
