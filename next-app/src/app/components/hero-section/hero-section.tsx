@@ -7,6 +7,7 @@ import { faPlay } from "@fortawesome/free-solid-svg-icons";
 export default function HeroSection() {
   const texts = ["Stand Out", "Succeed", "Wow", "Convert"];
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [slidePosition, setSlidePosition] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -15,6 +16,19 @@ export default function HeroSection() {
 
     return () => clearInterval(interval);
   }, [texts.length]);
+
+  const handleButtonClick = () => {
+    let scrollDistance = 500;
+
+    if (window.innerWidth < 768) {
+      scrollDistance = 1000;
+    }
+
+    window.scrollTo({
+      top: window.scrollY + scrollDistance,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <>
@@ -33,12 +47,12 @@ export default function HeroSection() {
         </div>
         <div className="w-full lg:w-1/3 ">
           <div className="h-full flex items-center justify-center lg:justify-left">
-            <Link
-              href="#about-video-player"
+            <button
+              onClick={handleButtonClick}
               className="p-2 mx-4 text-4xl lg:text-7xl text-white font-semibold bg-black rounded-full flex items-center justify-center w-36 h-36 lg:w-48 lg:h-48 mt-6 lg:mt-0 "
             >
               <FontAwesomeIcon icon={faPlay} height={120} width={120} beat />
-            </Link>
+            </button>
           </div>
         </div>
       </div>
