@@ -28,6 +28,7 @@
     "@types/nodemailer": "^6.4.17",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.1",
+    "babel-plugin-react-compiler": "^0.0.0-experimental-9ed098e-20241108",
     "eslint": "^9.14.0",
     "eslint-config-next": "^15.0.3",
     "prettier": "^3.3.3",

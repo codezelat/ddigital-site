@@ -98,12 +98,12 @@ export default function ServicesSection() {
             onMouseLeave={() => handleMouseLeave()}
           >
             <Image
-              className="rounded-xl"
+              className="rounded-xl object-cover"
               src={`${service.imageUrl1}`}
               alt={service.title}
-              loading="lazy"
-              objectFit="cover"
-              layout="fill"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              priority={index === 0}
               placeholder="blur"
               blurDataURL={service.blurUrl}
             />

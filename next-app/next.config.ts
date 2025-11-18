@@ -13,6 +13,10 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Enable React Compiler (experimental in React 19)
+  experimental: {
+    reactCompiler: true,
+  },
 };
 
 export default nextConfig;

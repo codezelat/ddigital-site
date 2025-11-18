@@ -5,7 +5,11 @@ import Header from "./header";
 import Footer from "./footer";
 // import MaintenanceSection from "./components/maintenance-section/maintenance-section";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ 
+  subsets: ["latin"],
+  display: 'swap',
+  variable: '--font-inter',
+});
 
 export const metadata: Metadata = {
   title: "Ddigital",
@@ -14,12 +18,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className}`}>
+    <html lang="en" className={inter.variable}>
+      <body className={inter.className}>
         <Header />
         {children}
         <Footer />

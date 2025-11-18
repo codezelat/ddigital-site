@@ -139,8 +139,6 @@ export default function WorkSection() {
                       alt={data.title}
                       width={500}
                       height={500}
-                      loading="lazy"
-                      objectFit="cover"
                       placeholder="blur"
                       blurDataURL={data.blurImage}
                     />

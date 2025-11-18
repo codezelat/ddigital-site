@@ -4,12 +4,11 @@ import HeroSection from "./components/hero-section/hero-section";
 import ServicesSection from "./components/services-section/services-section";
 import TestimonialsSection from "./components/testimonials-section/testimonials-section";
 import WorkSection from "./components/work-section/work-section";
-import { Metadata } from 'next'
+import type { Metadata } from 'next';
  
 export const metadata: Metadata = {
   title: 'Ddigital - Ultimate Digital Media Hub based in Sri Lanka',
   description: 'Discover a world of creativity, innovation, and excellence at Ddigital, your premier destination for all things media in Sri Lanka. Our passionate team at DDigital: Digital Media Hub based in Sri Lanka, specializes in digital design, photography, videography, and more, offering diverse solutions tailored to meet your unique media needs.',
-  keywords: ['Ddigital', 'Media Agency', 'Graphic Design', 'Branding', 'Creative Content', 'Sri Lanka'],
   authors: [{ name: 'Codezela Technologies', url: 'https://codezela.com' }],
   openGraph: {
     title: 'Ddigital - Ultimate Digital Media Hub based in Sri Lanka',
