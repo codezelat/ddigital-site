@@ -5,10 +5,10 @@ import Header from "./header";
 import Footer from "./footer";
 // import MaintenanceSection from "./components/maintenance-section/maintenance-section";
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
-  display: 'swap',
-  variable: '--font-inter',
+  display: "swap",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
