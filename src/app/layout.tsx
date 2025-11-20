@@ -1,5 +1,5 @@
 import "./globals.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import Header from "./header";
 import Footer from "./footer";
@@ -10,6 +10,17 @@ const inter = Inter({
   display: "swap",
   variable: "--font-inter",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#000000" },
+  ],
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ddigital.lk"),
@@ -191,6 +202,113 @@ export default function RootLayout({
     },
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://ddigital.lk",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "About",
+        item: "https://ddigital.lk/#about",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Services",
+        item: "https://ddigital.lk/#services",
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: "Work",
+        item: "https://ddigital.lk/#work",
+      },
+      {
+        "@type": "ListItem",
+        position: 5,
+        name: "Testimonials",
+        item: "https://ddigital.lk/#testimonials",
+      },
+      {
+        "@type": "ListItem",
+        position: 6,
+        name: "Contact",
+        item: "https://ddigital.lk/#contact",
+      },
+    ],
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://ddigital.lk/#service",
+    serviceType: "Digital Media Services",
+    provider: {
+      "@id": "https://ddigital.lk/#organization",
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "Sri Lanka",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Digital Media Services",
+      itemListElement: [
+        {
+          "@type": "OfferCatalog",
+          name: "Photography Services",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Professional Photography",
+                description:
+                  "High-quality photography services for businesses and events",
+              },
+            },
+          ],
+        },
+        {
+          "@type": "OfferCatalog",
+          name: "Videography Services",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Professional Videography",
+                description: "Creative video production and editing services",
+              },
+            },
+          ],
+        },
+        {
+          "@type": "OfferCatalog",
+          name: "Digital Design Services",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Digital Design",
+                description:
+                  "Creative digital design solutions for brands and businesses",
+              },
+            },
+          ],
+        },
+      ],
+    },
+  };
+
   return (
     <html lang="en" className={inter.variable}>
       <head>
@@ -210,6 +328,18 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(websiteSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(breadcrumbSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(serviceSchema),
           }}
         />
       </head>
