@@ -395,7 +395,7 @@ This project is proprietary software developed for **Ddigital** by [Codezela Tec
 - 🌐 Website: [https://ddigital.lk](https://ddigital.lk)
 - 📧 Email: ddigital.lk@gmail.com
 - 📱 Phone: +94 72 733 3577
-- 📍 Location: Pannipitiya, 10230, Sri Lanka
+- 📍 Location: 345/35, RIT Alles Mw, Colombo 08, Sri Lanka
 
 **Social Media:**
 

@@ -105,13 +105,13 @@ export default function Footer() {
           </div>
           <div className="text-center sm:text-start">
             <ul className="list-none text-sm p-8 m-0">
-              <Link href="https://maps.app.goo.gl/y5d1XGWWeN8Q2qFB8">
+              <Link href="https://www.google.com/maps/search/?api=1&query=345%2F35%2C%20RIT%20Alles%20Mw%2C%20Colombo%2008%2C%20Sri%20Lanka">
                 <li className="mb-2 text-xl">
-                  Pannipitiya,
+                  345/35, RIT Alles Mw,
                   <br />
-                  10230,
+                  Colombo 08,
                   <br />
-                  LK
+                  Sri Lanka
                 </li>
               </Link>
             </ul>
