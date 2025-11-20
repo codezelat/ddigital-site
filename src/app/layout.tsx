@@ -139,7 +139,7 @@ export default function RootLayout({
     ],
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.8",
+      ratingValue: "5",
       reviewCount: "6",
     },
     description:
@@ -176,7 +176,7 @@ export default function RootLayout({
     },
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.8",
+      ratingValue: "5",
       reviewCount: "6",
     },
   };
