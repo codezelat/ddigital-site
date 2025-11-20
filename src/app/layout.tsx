@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | Ddigital",
   },
   description:
-    "Ddigital is Sri Lanka's leading digital media agency specializing in creative design, photography, videography, and innovative digital solutions. Empowering brands with exceptional media services.",
+    "Ddigital is Sri Lanka's leading digital media agency specializing in creative design, photography, videography, and innovative digital solutions. Based in Colombo, we empower brands with exceptional media services.",
   keywords: [
     "ddigital",
     "digital media Sri Lanka",
@@ -28,6 +28,8 @@ export const metadata: Metadata = {
     "digital design",
     "media production",
     "Colombo digital agency",
+    "Sri Lanka digital services",
+    "Colombo 08",
   ],
   authors: [
     { name: "Ddigital", url: "https://ddigital.lk" },
@@ -44,16 +46,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://ddigital.lk",
-    siteName: "Ddigital",
+    siteName: "Ddigital - Digital Media Hub",
     title: "Ddigital - Premier Digital Media Hub in Sri Lanka",
     description:
-      "Ddigital is Sri Lanka's leading digital media agency specializing in creative design, photography, videography, and innovative digital solutions. Empowering brands with exceptional media services.",
+      "Ddigital is Sri Lanka's leading digital media agency specializing in creative design, photography, videography, and innovative digital solutions. Based in Colombo, we empower brands with exceptional media services.",
     images: [
       {
         url: "/img/brand/banner.jpg",
         width: 2000,
         height: 350,
-        alt: "Ddigital - Digital Media Agency in Sri Lanka",
+        alt: "Ddigital - Premier Digital Media Hub in Sri Lanka",
       },
     ],
   },
@@ -61,8 +63,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ddigital - Premier Digital Media Hub in Sri Lanka",
     description:
-      "Ddigital is Sri Lanka's leading digital media agency specializing in creative design, photography, videography, and innovative digital solutions.",
+      "Ddigital is Sri Lanka's leading digital media agency specializing in creative design, photography, videography, and innovative digital solutions. Based in Colombo.",
     images: ["/img/brand/banner.jpg"],
+    site: "@ddigital_lk",
+    creator: "@ddigital_lk",
   },
   alternates: {
     canonical: "https://ddigital.lk",
@@ -101,12 +105,32 @@ export default function RootLayout({
     },
     address: {
       "@type": "PostalAddress",
+      streetAddress: "345/35, RIT Alles Mw",
+      addressLocality: "Colombo 08",
+      postalCode: "00800",
       addressCountry: "LK",
-      addressLocality: "Sri Lanka",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+94-72-733-3577",
+      contactType: "customer service",
+      email: "ddigital.lk@gmail.com",
+      availableLanguage: ["English", "Sinhala"],
     },
     sameAs: [
       "https://ddigital.lk",
+      "https://www.instagram.com/ddigital.lk/",
+      "https://www.facebook.com/ddigital.lk/",
+      "https://www.tiktok.com/@ddigital.lk/",
+      "https://www.youtube.com/@ddigital_lk/",
+      "https://twitter.com/ddigital_lk/",
+      "https://www.threads.net/@ddigital.lk",
     ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "6",
+    },
     description:
       "Ddigital is Sri Lanka's leading digital media agency specializing in creative design, photography, videography, and innovative digital solutions.",
   };
@@ -118,21 +142,31 @@ export default function RootLayout({
     name: "Ddigital",
     image: "https://ddigital.lk/img/brand/banner.jpg",
     url: "https://ddigital.lk",
+    telephone: "+94-72-733-3577",
+    email: "ddigital.lk@gmail.com",
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",
+      streetAddress: "345/35, RIT Alles Mw",
+      addressLocality: "Colombo 08",
+      postalCode: "00800",
       addressCountry: "LK",
-      addressLocality: "Sri Lanka",
     },
     geo: {
       "@type": "GeoCoordinates",
-      addressCountry: "LK",
+      latitude: "6.9120",
+      longitude: "79.8770",
     },
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       opens: "09:00",
       closes: "17:00",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "6",
     },
   };
 
