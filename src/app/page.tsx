@@ -25,13 +25,13 @@ export const metadata: Metadata = {
     description:
       "Discover a world of creativity, innovation, and excellence at Ddigital, your premier destination for all things media in Sri Lanka. Our passionate team specializes in digital design, photography, videography, and more, offering diverse solutions tailored to meet your unique media needs.",
     url: "https://ddigital.lk",
-    siteName: "Ddigital",
+    siteName: "Ddigital - Digital Media Hub",
     images: [
       {
         url: "/img/brand/banner.jpg",
         width: 2000,
         height: 350,
-        alt: "Ddigital - Media Agency in Sri Lanka",
+        alt: "Ddigital - Ultimate Digital Media Hub in Sri Lanka",
       },
     ],
     locale: "en_US",
@@ -43,6 +43,8 @@ export const metadata: Metadata = {
     description:
       "Discover creativity, innovation, and excellence at Ddigital, your premier destination for media services in Sri Lanka. Digital design, photography, videography, and more.",
     images: ["/img/brand/banner.jpg"],
+    site: "@ddigital_lk",
+    creator: "@ddigital_lk",
   },
   alternates: {
     canonical: "https://ddigital.lk",
