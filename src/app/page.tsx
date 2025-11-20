@@ -9,17 +9,26 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Ddigital - Ultimate Digital Media Hub based in Sri Lanka",
   description:
-    "Discover a world of creativity, innovation, and excellence at Ddigital, your premier destination for all things media in Sri Lanka. Our passionate team at DDigital: Digital Media Hub based in Sri Lanka, specializes in digital design, photography, videography, and more, offering diverse solutions tailored to meet your unique media needs.",
-  authors: [{ name: "Codezela Technologies", url: "https://codezela.com" }],
+    "Discover a world of creativity, innovation, and excellence at Ddigital, your premier destination for all things media in Sri Lanka. Our passionate team specializes in digital design, photography, videography, and more, offering diverse solutions tailored to meet your unique media needs.",
+  keywords: [
+    "ddigital Sri Lanka",
+    "digital media hub",
+    "creative agency",
+    "photography services",
+    "videography services",
+    "digital design Sri Lanka",
+    "media production",
+    "content creation",
+  ],
   openGraph: {
     title: "Ddigital - Ultimate Digital Media Hub based in Sri Lanka",
     description:
-      "Discover a world of creativity, innovation, and excellence at Ddigital, your premier destination for all things media in Sri Lanka. Our passionate team at DDigital: Digital Media Hub based in Sri Lanka, specializes in digital design, photography, videography, and more, offering diverse solutions tailored to meet your unique media needs.",
+      "Discover a world of creativity, innovation, and excellence at Ddigital, your premier destination for all things media in Sri Lanka. Our passionate team specializes in digital design, photography, videography, and more, offering diverse solutions tailored to meet your unique media needs.",
     url: "https://ddigital.lk",
-    siteName: "Ddigtial",
+    siteName: "Ddigital",
     images: [
       {
-        url: "https://ddigital.lk/img/brand/banner.jpg",
+        url: "/img/brand/banner.jpg",
         width: 2000,
         height: 350,
         alt: "Ddigital - Media Agency in Sri Lanka",
@@ -27,6 +36,16 @@ export const metadata: Metadata = {
     ],
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ddigital - Ultimate Digital Media Hub based in Sri Lanka",
+    description:
+      "Discover creativity, innovation, and excellence at Ddigital, your premier destination for media services in Sri Lanka. Digital design, photography, videography, and more.",
+    images: ["/img/brand/banner.jpg"],
+  },
+  alternates: {
+    canonical: "https://ddigital.lk",
   },
 };
 
