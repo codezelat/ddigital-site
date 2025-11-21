@@ -122,7 +122,12 @@ export default function Footer() {
             <div className="text-6xl font-bold text-white mb-6">Ddigital</div>
           </Link>
           <div className="text-sm text-white mb-6">
-            Copyright &copy; {new Date().getFullYear()} | Ddigital
+            &copy; 2025 Ddigital. All rights reserved. A proud product built with
+            love by{" "}
+            <Link href="https://codezela.com" target="_blank">
+              Codezela Technologies
+            </Link>
+            .
           </div>
         </div>
       </div>
