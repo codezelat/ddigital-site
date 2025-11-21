@@ -1,7 +1,7 @@
 # Ddigital - Digital Media Hub Website
 
 <div align="center">
-  <h3>Ultimate Digital Media Hub based in Sri Lanka</h3>
+  <h3>Digital Media and Creative Content Creation Hub based in Sri Lanka</h3>
   <p>A modern, responsive website built with Next.js 15 and React 19</p>
   
   [![Next.js](https://img.shields.io/badge/Next.js-15.0.3-black?logo=next.js)](https://nextjs.org/)

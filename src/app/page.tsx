@@ -7,7 +7,7 @@ import WorkSection from "./components/work-section/work-section";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Ddigital - Ultimate Digital Media Hub based in Sri Lanka",
+  title: "Ddigital - Digital Media and Creative Content Creation Sri Lanka",
   description:
     "Discover a world of creativity, innovation, and excellence at Ddigital, your premier destination for all things media in Sri Lanka. Our passionate team specializes in digital design, photography, videography, and more, offering diverse solutions tailored to meet your unique media needs.",
   keywords: [
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     "content creation",
   ],
   openGraph: {
-    title: "Ddigital - Ultimate Digital Media Hub based in Sri Lanka",
+    title: "Ddigital - Digital Media and Creative Content Creation Hub based in Sri Lanka",
     description:
       "Discover a world of creativity, innovation, and excellence at Ddigital, your premier destination for all things media in Sri Lanka. Our passionate team specializes in digital design, photography, videography, and more, offering diverse solutions tailored to meet your unique media needs.",
     url: "https://ddigital.lk",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
         url: "/img/brand/banner.jpg",
         width: 2000,
         height: 350,
-        alt: "Ddigital - Ultimate Digital Media Hub in Sri Lanka",
+        alt: "Ddigital - Digital Media and Creative Content Creation Hub in Sri Lanka",
       },
     ],
     locale: "en_US",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ddigital - Ultimate Digital Media Hub based in Sri Lanka",
+    title: "Ddigital - Digital Media and Creative Content Creation Hub based in Sri Lanka",
     description:
       "Discover creativity, innovation, and excellence at Ddigital, your premier destination for media services in Sri Lanka. Digital design, photography, videography, and more.",
     images: ["/img/brand/banner.jpg"],
