@@ -38,7 +38,7 @@ export default function ServicesSection() {
           key={service.slug}
         >
           <div
-            className="outer-service-div relative flex flex-col justify-end lg:justify-start items-center lg:flex-row bg-white rounded-xl w-full h-96"
+            className="outer-service-div relative flex flex-col justify-end lg:justify-start items-center lg:flex-row bg-white rounded-xl w-full min-h-[26rem] md:min-h-[24rem] lg:min-h-[26rem]"
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
           >
@@ -52,17 +52,17 @@ export default function ServicesSection() {
               placeholder="blur"
               blurDataURL={service.blurUrl}
             />
-            <div className="z-20 h-fit md:w-2/3 flex flex-col items-center justify-center bg-black bg-opacity-50 px-10 py-16 rounded-xl w-fit">
-              <span className="text-3xl md:text-4xl lg:text-7xl font-semibold text-center text-white mb-8">
+            <div className="z-20 h-fit md:w-2/3 flex flex-col items-center justify-center bg-black bg-opacity-50 px-6 md:px-10 py-10 md:py-16 rounded-xl w-[90%] md:w-fit text-center">
+              <span className="text-3xl md:text-4xl lg:text-6xl font-semibold text-center text-white mb-6 md:mb-8">
                 {service.title}
               </span>
               <Link
                 href={`/services/${service.slug}`}
-                className="text-md lg:text-2xl font-semibold flex items-center text-center text-white"
+                className="text-md lg:text-2xl font-semibold flex items-center text-center text-white gap-3"
               >
                 <FontAwesomeIcon
                   icon={faArrowRight}
-                  className="bg-white rounded-md text-black p-3 lg:p-4 mr-4"
+                  className="bg-white rounded-md text-black p-3 lg:p-4"
                   height={18}
                   width={18}
                 />
@@ -72,7 +72,7 @@ export default function ServicesSection() {
           </div>
 
           <div
-            className={`z-30 inner-service-div absolute top-0 left-0 flex flex-col lg:flex-row bg-[#222222] rounded-xl items-center justify-center content-center p-4 md:p-8 border-0 w-full h-96 ${
+            className={`z-30 inner-service-div absolute top-0 left-0 flex flex-col lg:flex-row bg-[#222222] rounded-xl items-center justify-center content-center p-4 md:p-8 border-0 w-full min-h-[26rem] md:min-h-[24rem] lg:min-h-[26rem] ${
               showInnerDiv === index ? styles.hideInnerDiv : styles.showInnerDiv
             }`}
             onMouseEnter={() => handleMouseEnter(index)}

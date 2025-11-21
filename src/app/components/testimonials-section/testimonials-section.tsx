@@ -37,8 +37,8 @@ const testimonials = [
     id: 4,
     quote:
       "Ddigital's digital illustrations and character designs have been a game-changer for our brand. Their creativity and attention to detail shine through in their work. It's really exciting to have such a talented team under our team.",
-    author: "Chanuka Wijesinghe",
-    title: "DMA Executive | Codezela",
+    author: "Aruna Wickremasinghe",
+    title: "DMA | CodeZela",
     image: "/img/clients/codezela.png",
   },
 ];
@@ -72,10 +72,13 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <div id="feedback" className="m-2 sm:m-10 mt-20 lg:mt-32 lg:p-5 lg:pb-20">
+    <div
+      id="feedback"
+      className="m-2 sm:m-10 mt-20 lg:mt-32 lg:p-5 lg:pb-20"
+    >
       <div className="flex flex-col lg:flex-row">
         <div className="lg:w-3/4">
-          <h2 className="flex items-center text-4xl md:text-6xl lg:text-8xl mb-12 md:mb-12 sm:mb-32 font-semibold s-full sm:w-2/3 ">
+          <h2 className="flex items-center text-4xl md:text-6xl lg:text-8xl leading-tight mb-8 md:mb-12 sm:mb-20 font-semibold s-full sm:w-2/3">
             Hear why our clients love us
             <FontAwesomeIcon
               icon={faHeart}
@@ -85,7 +88,7 @@ export default function TestimonialsSection() {
               beat
             />
           </h2>
-          <p className="text-lg lg:text-3xl mb-2 md:mb-0 lg:mb-8 font-medium h-48">
+          <p className="text-lg lg:text-3xl mb-4 md:mb-6 lg:mb-8 font-medium min-h-[12rem] lg:min-h-[14rem]">
             <FontAwesomeIcon
               icon={faQuoteLeftAlt}
               height={80}
@@ -100,16 +103,16 @@ export default function TestimonialsSection() {
               className="text-black-300"
             />
           </p>
-          <div className="flex lg:flex-row items-center pt-12 md:pt-0 lg:pt-0">
+          <div className="flex lg:flex-row items-center pt-6 md:pt-4 lg:pt-0 gap-4">
             <div className="flex flex-col">
               <h1 className="text-lg sm:text-2xl font-semibold">
                 {currentComment.author}
               </h1>
               <p className="text-md sm:text-lg">{currentComment.title}</p>
             </div>
-            <div className="lg:w-1/3 flex flex-col ml-5 lg:ml-24">
+            <div className="lg:w-1/3 flex flex-col ml-5 lg:ml-16">
               <Image
-                className="h-20 w-32 float-right object-contain"
+                className="h-16 w-28 sm:h-20 sm:w-32 float-right object-contain"
                 src={currentComment.image}
                 alt="Logo"
                 width={100}
@@ -118,7 +121,7 @@ export default function TestimonialsSection() {
             </div>
           </div>
         </div>
-        <div className="lg:w-1/3 flex items-end gap-3 lg:mr-30 sm:flex justify-center ">
+        <div className="lg:w-1/3 flex items-end gap-3 lg:mr-30 sm:flex justify-center mt-8 lg:mt-0">
           <div className="flex flex-col">
             <span
               className="inline-flex items-center rotate-180 transition-transform duration-100 ease-in-out hover:-translate-x-5"

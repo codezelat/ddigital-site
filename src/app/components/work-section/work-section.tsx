@@ -133,47 +133,41 @@ export default function WorkSection() {
         >
           {worksData.map((data, index) => (
             <SwiperSlide key={index}>
-              <>
-                <div className="flex flex-col items-center text-center">
-                  <div className="absolute left-[55%] top-[15%] bg-black text-white text-md text-center font-semibold px-3 py-3 rounded-md z-40 w-32">
+              <div className="relative flex flex-col items-center text-center h-full">
+                <div className="absolute left-4 top-4 lg:left-4 lg:top-4 bg-black text-white text-md text-center font-semibold px-3 py-3 rounded-md z-40 w-32">
+                  {data.category}
+                </div>
+                <div className="flex flex-col bg-center bg-cover items-center justify-center">
+                  <Image
+                    className="rounded-xl w-full h-auto"
+                    src={data.imageSrc}
+                    alt={data.title}
+                    width={500}
+                    height={500}
+                    placeholder="blur"
+                    blurDataURL={data.blurImage}
+                  />
+                  <Link href={data.href} target="_blank" className="-mt-[100%]">
+                    <div className="inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity m-4 md:m-6">
+                      <Image
+                        className="object-cover rounded-xl w-full h-auto"
+                        src={data.hoverImageSrc}
+                        alt={data.title}
+                        width={500}
+                        height={500}
+                        loading="lazy"
+                        placeholder="blur"
+                        blurDataURL={data.blurImage}
+                      />
+                    </div>
+                  </Link>
+                </div>
+                <div className="flex flex-col">
+                  <div className="text-xl text-black font-bold mt-5">
                     {data.category}
                   </div>
-                  <div className="flex flex-col bg-center bg-cover items-center justify-center">
-                    <Image
-                      className="rounded-xl"
-                      src={data.imageSrc}
-                      alt={data.title}
-                      width={500}
-                      height={500}
-                      placeholder="blur"
-                      blurDataURL={data.blurImage}
-                    />
-                    <Link
-                      href={data.href}
-                      target="_blank"
-                      className="-mt-[100%]"
-                    >
-                      <div className="inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity m-4 md:m-6">
-                        <Image
-                          className="object-cover rounded-xl w-95 h-95"
-                          src={data.hoverImageSrc}
-                          alt={data.title}
-                          width={500}
-                          height={500}
-                          loading="lazy"
-                          placeholder="blur"
-                          blurDataURL={data.blurImage}
-                        />
-                      </div>
-                    </Link>
-                  </div>
-                  <div className="flex flex-col">
-                    <div className="text-xl text-black font-bold mt-5">
-                      {data.title}
-                    </div>
-                  </div>
                 </div>
-              </>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
