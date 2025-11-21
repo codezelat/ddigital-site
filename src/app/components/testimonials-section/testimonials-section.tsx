@@ -37,7 +37,7 @@ const testimonials = [
     id: 4,
     quote:
       "Ddigital's digital illustrations and character designs have been a game-changer for our brand. Their creativity and attention to detail shine through in their work. It's really exciting to have such a talented team under our team.",
-    author: "Aruna Wickremasinghe",
+    author: "Aruna Amarasinghe",
     title: "DMA | CodeZela",
     image: "/img/clients/codezela.png",
   },
