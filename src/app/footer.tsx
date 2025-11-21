@@ -6,14 +6,13 @@ export default function Footer() {
       <div className="lg:p-5">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5">
           <div className="text-center sm:text-start col-span-3">
-            <ul className="list-none text-3xl lg:text-4xl p-8 m-0">
-              We dedicate ourselves to helping
-              <br />
-              <span className="font-bold">Businesses </span>
-              to achieve <span className="font-bold">Excellence</span>
-              <br />
-              with their brand.
-            </ul>
+            <div className="p-8 m-0 text-3xl lg:text-4xl leading-tight">
+              <p className="mb-0">
+                We dedicate ourselves to helping{" "}
+                <span className="font-bold">Businesses</span> achieve{" "}
+                <span className="font-bold">Excellence</span> with their brand.
+              </p>
+            </div>
           </div>
           <div className="text-center sm:text-start col-span-3 md:col-span-1">
             <ul className="list-none text-sm p-8 m-0">
@@ -104,15 +103,13 @@ export default function Footer() {
           </div>
           <div className="text-center sm:text-start">
             <ul className="list-none text-sm p-8 m-0">
-              <Link href="https://www.google.com/maps/search/?api=1&query=345%2F35%2C%20RIT%20Alles%20Mw%2C%20Colombo%2008%2C%20Sri%20Lanka">
-                <li className="mb-2 text-xl">
-                  345/35, RIT Alles Mw,
-                  <br />
-                  Colombo 08,
-                  <br />
-                  Sri Lanka
-                </li>
-              </Link>
+              <li className="mb-2 text-xl">
+                <Link href="https://www.google.com/maps/search/?api=1&query=345%2F35%2C%20RIT%20Alles%20Mw%2C%20Colombo%2008%2C%20Sri%20Lanka">
+                  <span className="block">345/35, RIT Alles Mw,</span>
+                  <span className="block">Colombo 08,</span>
+                  <span className="block">Sri Lanka</span>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

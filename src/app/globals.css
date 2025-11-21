@@ -17,3 +17,15 @@ body {
   position: absolute !important;
   bottom: -40px !important;
 }
+
+.swiper-pagination-bullet {
+  width: 48px !important;
+  height: 48px !important;
+  margin: 0 6px !important;
+  opacity: 0.5 !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+  transform: scale(1.05);
+}
