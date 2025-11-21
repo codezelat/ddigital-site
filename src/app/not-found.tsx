@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function NotFound() {
   return (
     <main className="px-4 md:px-8 lg:px-12 pb-24">
@@ -24,18 +26,18 @@ export default function NotFound() {
             quick chat with the team. Use the links below to continue.
           </p>
           <div className="flex flex-wrap gap-3">
-            <a
+            <Link
               href="/"
               className="px-5 py-3 bg-white text-black font-semibold rounded-xl hover:-translate-y-0.5 transition-transform duration-200"
             >
               Go home
-            </a>
-            <a
+            </Link>
+            <Link
               href="/services"
               className="px-5 py-3 bg-[#22c55e] text-black font-semibold rounded-xl hover:-translate-y-0.5 transition-transform duration-200"
             >
               View services
-            </a>
+            </Link>
             <a
               href="https://cal.com/codezela/"
               target="_blank"
