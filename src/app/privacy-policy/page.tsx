@@ -75,7 +75,7 @@ const sections = [
   {
     title: "Contact us",
     body: [
-      "For privacy requests, email privacy@ddigital.lk or contact@codezela.com. We aim to respond within 10 business days.",
+      "For privacy requests, email info@ddigital.lk or info@codezela.com. We aim to respond within 10 business days.",
       "Postal: 345/35, RIT Alles Mw, Colombo 08, Sri Lanka.",
     ],
   },
@@ -97,7 +97,7 @@ export default function PrivacyPolicyPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <section className="mt-24 lg:mt-28 bg-black text-white rounded-3xl overflow-hidden relative">
+      <section className="mt-36 bg-black text-white rounded-3xl overflow-hidden relative">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-black/70 to-black" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(34,197,94,0.2),transparent_30%),radial-gradient(circle_at_80%_10%,rgba(255,255,255,0.12),transparent_28%)] mix-blend-screen" />
         <div className="relative p-8 lg:p-16 space-y-6 lg:space-y-8">
@@ -109,25 +109,11 @@ export default function PrivacyPolicyPage() {
             Your privacy, handled with care.
           </h1>
           <p className="text-lg lg:text-xl text-white/80 max-w-4xl">
-            We collect only what we need to respond to you, deliver your project,
-            and keep our platform secure. Below is a plain-language summary of
-            how we handle data for visitors and clients in Sri Lanka and abroad.
+            We collect only what we need to respond to you, deliver your
+            project, and keep our platform secure. Below is a plain-language
+            summary of how we handle data for visitors and clients in Sri Lanka
+            and abroad.
           </p>
-          <div className="flex flex-wrap gap-3">
-            <Link
-              href="mailto:privacy@ddigital.lk"
-              className="px-5 py-3 bg-white text-black font-semibold rounded-xl hover:-translate-y-0.5 transition-transform duration-200"
-            >
-              Email privacy team
-            </Link>
-            <Link
-              href="https://wa.me/+94727333577/"
-              target="_blank"
-              className="px-5 py-3 bg-[#22c55e] text-black font-semibold rounded-xl hover:-translate-y-0.5 transition-transform duration-200"
-            >
-              WhatsApp Us
-            </Link>
-          </div>
         </div>
       </section>
 
@@ -169,7 +155,7 @@ export default function PrivacyPolicyPage() {
             <ul className="space-y-3 text-white/85">
               <li className="flex gap-3">
                 <span className="mt-1 h-2 w-2 rounded-full bg-[#22c55e]" />
-                We do not sell personal data—ever.
+                We do not sell personal data ever.
               </li>
               <li className="flex gap-3">
                 <span className="mt-1 h-2 w-2 rounded-full bg-[#22c55e]" />
@@ -195,10 +181,10 @@ export default function PrivacyPolicyPage() {
             <p className="text-neutral-700">
               For privacy questions or data requests, reach us at{" "}
               <Link
-                href="mailto:privacy@ddigital.lk"
+                href="mailto:info@ddigital.lk"
                 className="underline font-semibold"
               >
-                privacy@ddigital.lk
+                info@ddigital.lk
               </Link>{" "}
               or call <Link href="tel:+94727333577">+94 72 733 3577</Link>.
             </p>

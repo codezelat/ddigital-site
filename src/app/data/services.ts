@@ -47,7 +47,7 @@ export const services: Service[] = [
     intro:
       "Production-ready design for campaigns, social, pitch decks, and product comms with rigorous quality control and fast turnaround.",
     description:
-      "We blend brand stewardship with high-velocity production so every asset feels premium—whether it is a carousel, a keynote, or an always-on campaign toolkit.",
+      "We blend brand stewardship with high-velocity production so every asset feels premium whether it is a carousel, a keynote, or an always-on campaign toolkit.",
     focus: [
       "Campaign creative, social templates, and ad sets",
       "Sales decks, investment pitch materials, and case study kits",
@@ -126,7 +126,7 @@ export const services: Service[] = [
     title: "Photography and Videography",
     heroTitle: "Production that captures your brand at its best.",
     intro:
-      "From product launches to documentaries, we shoot with strategy—ensuring every frame serves a story and a business outcome.",
+      "From product launches to documentaries, we shoot with strategy ensuring every frame serves a story and a business outcome.",
     description:
       "Our crews handle end-to-end production with meticulous pre-pro, on-set efficiency, and post workflows tuned for multi-platform delivery.",
     focus: [

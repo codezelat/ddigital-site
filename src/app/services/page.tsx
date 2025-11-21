@@ -38,7 +38,7 @@ export default function ServicesPage() {
   const faqs = [
     {
       q: "Why choose Ddigital for creative services in Sri Lanka?",
-      a: "We pair senior creative leadership with on-ground insight into Sri Lankan audiences, regulations, and channels—so campaigns launch faster and resonate locally.",
+      a: "We pair senior creative leadership with on-ground insight into Sri Lankan audiences, regulations, and channels, so campaigns launch faster and resonate locally.",
     },
     {
       q: "How fast can you start and deliver?",
