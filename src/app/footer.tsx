@@ -38,8 +38,7 @@ export default function Footer() {
               </li>
               <li className="mb-4 text-xl">
                 <Link
-                  href="https://codezela.com/privacy-policy"
-                  target="_blank"
+                  href="/privacy-policy"
                 >
                   Privacy Policy
                 </Link>
