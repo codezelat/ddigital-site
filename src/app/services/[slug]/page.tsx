@@ -67,6 +67,38 @@ export default async function ServiceDetailPage({
     notFound();
   }
 
+  const faqs = [
+    {
+      q: `Why choose Ddigital for ${service.title} in Sri Lanka?`,
+      a: `We pair senior creative leadership with on-ground knowledge of Sri Lankan audiences, regulations, and channels. That means faster approvals, locally resonant storytelling, and assets that are ready for paid and organic distribution across the platforms that matter here.`,
+    },
+    {
+      q: `How fast can you launch ${service.title.toLowerCase()}?`,
+      a: `Discovery and strategy typically run in week one, with first concepts or cuts in 7–10 days. Because our team is in Sri Lanka, you get real-time collaboration without timezone lag, keeping approvals quick and momentum high.`,
+    },
+    {
+      q: `What proof of performance do you provide?`,
+      a: `Every engagement includes a launch checklist and post-launch review covering engagement, conversions, and watch-through or click-through (where relevant). We share a concise readout so you can present results internally with confidence.`,
+    },
+    {
+      q: `Do we own everything you deliver?`,
+      a: `Yes. You receive full usage rights, source files, guidelines, and templates so your internal teams can scale and adapt after the engagement ends.`,
+    },
+  ];
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.a,
+      },
+    })),
+  };
+
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -86,6 +118,10 @@ export default async function ServiceDetailPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       <section className="mt-32 lg:mt-36 relative overflow-hidden rounded-3xl bg-black text-white">
@@ -232,6 +268,96 @@ export default async function ServiceDetailPage({
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="mt-14 grid lg:grid-cols-2 gap-8">
+        <div className="bg-white rounded-3xl p-8 border border-neutral-100 shadow-[0_20px_120px_-60px_rgba(0,0,0,0.25)] space-y-4">
+          <h2 className="text-2xl font-semibold">
+            Why Ddigital for {service.title} in Sri Lanka
+          </h2>
+          <p className="text-neutral-700 leading-relaxed">
+            We design, build, and launch with the explicit goal of outperforming
+            competitors in Sri Lanka. That means language nuance, platform
+            preferences, and on-ground benchmarks guide every deliverable. You
+            get senior craft plus a process that is transparent, timed, and
+            measurable.
+          </p>
+          <ul className="space-y-2 text-neutral-800">
+            <li className="flex gap-3">
+              <span className="mt-1.5 h-2 w-2 rounded-full bg-[#22c55e]" />
+              Benchmarked against local and global best-in-class examples.
+            </li>
+            <li className="flex gap-3">
+              <span className="mt-1.5 h-2 w-2 rounded-full bg-[#22c55e]" />
+              Clear timelines, SLA-backed response times, and weekly recaps.
+            </li>
+            <li className="flex gap-3">
+              <span className="mt-1.5 h-2 w-2 rounded-full bg-[#22c55e]" />
+              Deliverables tailored for paid, organic, and offline channels used
+              in Sri Lanka.
+            </li>
+            <li className="flex gap-3">
+              <span className="mt-1.5 h-2 w-2 rounded-full bg-[#22c55e]" />
+              Governance kits so your team can scale assets without drift.
+            </li>
+          </ul>
+        </div>
+        <div className="bg-black text-white rounded-3xl p-8 border border-white/10 space-y-4">
+          <h2 className="text-2xl font-semibold">Engagement essentials</h2>
+          <div className="space-y-3 text-white/80">
+            <div className="flex gap-3">
+              <span className="mt-1 h-2 w-2 rounded-full bg-[#22c55e]" />
+              Typical timeline: strategy and concept in week one; production and
+              iteration in weeks two to four.
+            </div>
+            <div className="flex gap-3">
+              <span className="mt-1 h-2 w-2 rounded-full bg-[#22c55e]" />
+              Handover includes source files, templates, and usage rights.
+            </div>
+            <div className="flex gap-3">
+              <span className="mt-1 h-2 w-2 rounded-full bg-[#22c55e]" />
+              Measurement: pre-launch checklist and post-launch performance
+              review tailored to the service.
+            </div>
+            <div className="flex gap-3">
+              <span className="mt-1 h-2 w-2 rounded-full bg-[#22c55e]" />
+              Support: asynchronous updates plus weekly live reviews for rapid
+              approvals.
+            </div>
+          </div>
+          <div className="flex gap-3 flex-wrap">
+            <Link
+              href="https://cal.com/codezela/"
+              target="_blank"
+              className="px-5 py-3 bg-white text-black font-semibold rounded-xl hover:-translate-y-0.5 transition-transform duration-200"
+            >
+              Plan your project
+            </Link>
+            <Link
+              href="https://wa.me/+94727333577/"
+              target="_blank"
+              className="px-5 py-3 bg-[#22c55e] text-black font-semibold rounded-xl hover:-translate-y-0.5 transition-transform duration-200"
+            >
+              Talk on WhatsApp
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-14 bg-white rounded-3xl p-8 border border-neutral-100 shadow-[0_20px_120px_-60px_rgba(0,0,0,0.25)] space-y-6">
+        <h2 className="text-2xl font-semibold">
+          FAQs about {service.title} in Sri Lanka
+        </h2>
+        <div className="space-y-4">
+          {faqs.map((faq) => (
+            <div key={faq.q} className="space-y-2">
+              <h3 className="text-lg font-semibold text-neutral-900">
+                {faq.q}
+              </h3>
+              <p className="text-neutral-700 leading-relaxed">{faq.a}</p>
+            </div>
+          ))}
         </div>
       </section>
     </main>

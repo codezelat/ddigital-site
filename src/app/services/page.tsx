@@ -35,6 +35,38 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesPage() {
+  const faqs = [
+    {
+      q: "Why choose Ddigital for creative services in Sri Lanka?",
+      a: "We pair senior creative leadership with on-ground insight into Sri Lankan audiences, regulations, and channels—so campaigns launch faster and resonate locally.",
+    },
+    {
+      q: "How fast can you start and deliver?",
+      a: "Discovery in week one, first concepts or cuts in 7–10 days, then sprint-based production to keep momentum without sacrificing craft.",
+    },
+    {
+      q: "Do we receive source files and rights?",
+      a: "Yes. Every engagement includes source files, templates, and clear usage rights so your team can scale confidently after launch.",
+    },
+    {
+      q: "How do you measure success?",
+      a: "Each project includes a launch checklist and post-launch readout aligned to engagement, conversions, and channel-specific KPIs.",
+    },
+  ];
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.a,
+      },
+    })),
+  };
+
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -60,6 +92,10 @@ export default function ServicesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       <section className="mt-32 lg:mt-36 bg-black text-white rounded-3xl overflow-hidden relative">
@@ -138,6 +174,47 @@ export default function ServicesPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="mt-16 bg-white rounded-3xl p-8 lg:p-12 border border-neutral-100 shadow-[0_20px_120px_-60px_rgba(0,0,0,0.25)] space-y-8">
+        <div className="space-y-3">
+          <h2 className="text-2xl lg:text-3xl font-semibold">
+            FAQs about our services in Sri Lanka
+          </h2>
+          <p className="text-neutral-700">
+            Clear answers to help you decide quickly. Need more? Reach us on
+            WhatsApp or schedule a call.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          {faqs.map((faq) => (
+            <div
+              key={faq.q}
+              className="rounded-2xl border border-neutral-200 p-6 hover:-translate-y-1 transition-transform duration-200 bg-white"
+            >
+              <h3 className="text-lg font-semibold text-neutral-900 mb-2">
+                {faq.q}
+              </h3>
+              <p className="text-neutral-700 leading-relaxed">{faq.a}</p>
+            </div>
+          ))}
+        </div>
+        <div className="flex flex-wrap gap-3">
+          <Link
+            href="https://cal.com/codezela/"
+            target="_blank"
+            className="px-5 py-3 bg-black text-white font-semibold rounded-xl hover:-translate-y-0.5 transition-transform duration-200"
+          >
+            Book a discovery call
+          </Link>
+          <Link
+            href="https://wa.me/+94727333577/"
+            target="_blank"
+            className="px-5 py-3 bg-[#22c55e] text-black font-semibold rounded-xl hover:-translate-y-0.5 transition-transform duration-200"
+          >
+            WhatsApp Us
+          </Link>
         </div>
       </section>
 
