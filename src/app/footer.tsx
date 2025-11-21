@@ -18,7 +18,7 @@ export default function Footer() {
           <div className="text-center sm:text-start col-span-3 md:col-span-1">
             <ul className="list-none text-sm p-8 m-0">
               <li className="mb-4 text-xl">
-                <Link href="#services">Services</Link>
+                <Link href="/services">Services</Link>
               </li>
               <li className="mb-4 text-xl">
                 <Link href="#work">Work</Link>

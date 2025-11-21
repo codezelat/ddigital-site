@@ -2,10 +2,10 @@
 import { faChevronDown, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import { MouseEvent, useEffect, useState } from "react";
+import { useState } from "react";
 
 const navigationLinks = [
-  { url: "/header", title: "Home", isActive: true },
+  { url: "/", title: "Home", isActive: true },
   { url: "/services", title: "Services" },
   { url: "/work", title: "Work" },
   // { url: "/contact", title: "Contact" },
@@ -17,36 +17,6 @@ export default function Header() {
     setIsHideOnMobileVisible(!isHideOnMobileVisible);
   };
 
-  useEffect(() => {
-    const handleScrollToElement = (
-      e: MouseEvent<HTMLAnchorElement>,
-      id: string
-    ) => {
-      e.preventDefault();
-      const targetElement = document.querySelector(`#${id}`);
-      if (targetElement instanceof Element) {
-        const topOffset = (targetElement as HTMLElement).offsetTop;
-        window.scrollTo({
-          top: topOffset,
-          behavior: "smooth",
-        });
-      }
-    };
-
-    const scrollLinks = document.querySelectorAll(".scroll-link");
-    scrollLinks.forEach((link) => {
-      link.addEventListener("click", (e: any) => {
-        e.preventDefault();
-        const targetId = (link as HTMLAnchorElement)
-          .getAttribute("href")
-          ?.substring(1);
-        if (targetId) {
-          handleScrollToElement(e, targetId);
-        }
-      });
-    });
-  }, []);
-
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 items-center rounded-3xl bg-white backdrop-blur-10 m-5 shadow-2xl mx-12 ${
@@ -56,7 +26,7 @@ export default function Header() {
     >
       <div className="flex flex-col lg:flex-row justify-between items-center px-4">
         <div className="flex items-center justify-center m-5">
-          <Link href="./">
+          <Link href="/">
             <div className="text-4xl font-bold mr-4 font-kalam">Ddigital</div>
           </Link>
           <Link
@@ -83,7 +53,7 @@ export default function Header() {
                 key={index}
                 className={`m-2 py-2 text-lg font-semibold rounded-lg text-center ${
                   link.isActive ? "bg-black text-white" : "text-black"
-                } scroll-link`}
+                }`}
                 style={{ width: "110px" }}
                 href={link.url}
               >
