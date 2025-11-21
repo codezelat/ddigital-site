@@ -21,10 +21,10 @@ export default function Footer() {
                 <Link href="/services">Services</Link>
               </li>
               <li className="mb-4 text-xl">
-                <Link href="#work">Work</Link>
+                <Link href="/#work">Work</Link>
               </li>
               <li className="mb-4 text-xl">
-                <Link href="#about">About</Link>
+                <Link href="/#about">About</Link>
               </li>
             </ul>
           </div>
@@ -34,7 +34,7 @@ export default function Footer() {
                 <Link href="#">Blog</Link>
               </li> */}
               <li className="mb-4 text-xl">
-                <Link href="#contact">Contact</Link>
+                <Link href="/#contact">Contact</Link>
               </li>
               <li className="mb-4 text-xl">
                 <Link

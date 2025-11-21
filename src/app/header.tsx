@@ -7,7 +7,7 @@ import { useState } from "react";
 const navigationLinks = [
   { url: "/", title: "Home", isActive: true },
   { url: "/services", title: "Services" },
-  { url: "/work", title: "Work" },
+  { url: "/#work", title: "Work" },
   // { url: "/contact", title: "Contact" },
 ];
 
@@ -30,7 +30,7 @@ export default function Header() {
             <div className="text-4xl font-bold mr-4 font-kalam">Ddigital</div>
           </Link>
           <Link
-            href="#contact"
+            href="/#contact"
             className="md:hidden p-4 ml-4 text-lg text-white font-semibold bg-black rounded-full flex items-center justify-center"
             style={{ width: "48px", height: "48px" }}
           >
@@ -63,7 +63,7 @@ export default function Header() {
           </div>
           <div className="relative">
             <Link
-              href="#contact"
+              href="/#contact"
               className="p-4 ml-8 hidden md:flex text-lg text-white font-semibold bg-black rounded-full items-center justify-center"
               style={{ width: "48px", height: "48px" }}
             >
