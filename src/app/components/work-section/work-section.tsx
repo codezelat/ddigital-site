@@ -2,9 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
+import { Navigation, A11y, Autoplay } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/pagination";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
@@ -106,7 +105,7 @@ export default function WorkSection() {
       </div>
       <div className="mt-20">
         <Swiper
-          modules={[Navigation, Pagination, A11y, Autoplay]}
+          modules={[Navigation, A11y, Autoplay]}
           spaceBetween={50}
           slidesPerView={1}
           loop={true}
@@ -120,7 +119,6 @@ export default function WorkSection() {
             nextEl: ".arrow-right",
             prevEl: ".arrow-left",
           }}
-          pagination={{ clickable: true }}
           breakpoints={{
             768: {
               slidesPerView: 1,
