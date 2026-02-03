@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Header from "./header";
 import Footer from "./footer";
 import GoogleAnalytics from "./components/google-analytics";
+import { Toaster } from "react-hot-toast";
 // import MaintenanceSection from "./components/maintenance-section/maintenance-section";
 
 const inter = Inter({
@@ -346,6 +347,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <GoogleAnalytics />
+        <Toaster />
         <Header />
         {children}
         <Footer />
