@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 export default function ContactSection() {
   const [name, setName] = useState("");
@@ -138,7 +138,6 @@ export default function ContactSection() {
               >
                 Send message
               </button>
-              <Toaster />
             </div>
           </div>
         </div>
