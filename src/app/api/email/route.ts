@@ -2,6 +2,14 @@ import { type NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import Mail from "nodemailer/lib/mailer";
 
+const transport = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.NODEMAILER_EMAIL,
+    pass: process.env.NODEMAILER_PASSWORD,
+  },
+});
+
 export async function POST(request: NextRequest) {
   const { email, name, subject, messageBody } = await request.json();
 
@@ -16,14 +24,6 @@ export async function POST(request: NextRequest) {
       { status: 400 }
     );
   }
-
-  const transport = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.NODEMAILER_EMAIL,
-      pass: process.env.NODEMAILER_PASSWORD,
-    },
-  });
 
   const mailOptions: Mail.Options = {
     from: process.env.NODEMAILER_EMAIL,
