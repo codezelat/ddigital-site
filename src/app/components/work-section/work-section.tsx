@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -29,7 +30,7 @@ const worksData = [
   {
     imageSrc: "/img/work/3.jpg",
     blurImage:
-      "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCACTAJMDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDVooopgJSUtJQAlIaWkNACGmmnGmmgBppDSmkNADTTTTjTTQA00004000AIabTjTaAEooooASiiigDXooooASkpaSgBKQ0tIaAENNNONNNADTSGlNIaAGmmmnGmmgBppppxppoAQ02nGm0AJRRRQAlFFFAGvRRRQAlJS0lACUhpaQ0AIaaacaaaAGmkNKaQ0ANNNNONNNADTTTTjTTQAhptONNoASiiigBKKKKANeiiigBKSlpKAEpDS0hoAQ0004000ANNIaU0hoAaaaacaaaAGmmmnGmmgBDTacabQAlFFFACUUUUAa9FFFACUlLSUAJSGlpDQAhpppxppoAaaQ0ppDQA00004000ANNNNONNNACGm0402gBKKKKAEooooA16KKKAEpKWkoASkNLSGgBDTTTjTTQA00hpTSGgBppppxppoAaaaacaaaAENNpxptACUUUUAJRRRQBr0UUUAJSUtJQAlIaWkNACGmmnGmmgBppDSmkNADTTTTjTTQA00004000AIabTjTaAEooooASiiigDXooooASkpaSgBKQ0tIaAENNNONNNADTSGlNIaAGmmmnGmmgBppppxppoAQ02nGm0AJRRRQAlFFFAGvRRRQAlJS0lACUhpaQ0AIaaacaaaAGmkNKaQ0ANNNNONNNADTTTTjTTQAhptONNoASiiigBKKKKANeiiigBKSiigBKQ0UUAIaaaKKAGmkNFFADTTTRRQA0000UUAIabRRQAlFFFACUUUUAf//Z",
+      "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/AARCACTAJMDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDVooopgJSUtJQAlIaWkNACGmmnGmmgBppDSmkNADTTTTjTTQA00004000AIabTjTaAEooooASiiigDXooooASkpaSgBKQ0tIaAENNNONNNADTSGlNIaAGmmmnGmmgBppppxppoAQ02nGm0AJRRRQAlFFFAGvRRRQAlJS0lACUhpaQ0AIaaacaaaAGmkNKaQ0ANNNNONNNADTTTTjTTQAhptONNoASiiigBKKKKANeiiigBKSlpKAEpDS0hoAQ0004000ANNIaU0hoAaaaacaaaAGmmmnGmmgBDTacabQAlFFFACUUUUAa9FFFACUlLSUAJSGlpDQAhpppxppoAaaQ0ppDQA00004000ANNNNONNNACGm0402gBKKKKAEooooA16KKKAEpKWkoASkNLSGgBDTTTjTTQA00hpTSGgBppppxppoAaaaacaaaAENNpxptACUUUUAJRRRQBr0UUUAJSUtJQAlIaWkNACGmmnGmmgBppDSmkNADTTTTjTTQA00004000AIabTjTaAEooooASiiigDXooooASkpaSgBKQ0tIaAENNNONNNADTSGlNIaAGmmmnGmmgBppppxppoAQ02nGm0AJRRRQAlFFFAGvRRRQAlJS0lACUhpaQ0AIaaacaaaAGmkNKaQ0ANNNNONNNADTTTTjTTQAhptONNoASiiigBKKKKANeiiigBKSiigBKQ0UUAIaaaKKAGmkNFFADTTTRRQA0000UUAIabRRQAlFFFACUUUUAf//Z",
     hoverImageSrc: "/img/work-hover/3.jpg",
     title: "Dataleed",
     category: "UI Design",
@@ -47,7 +48,7 @@ const worksData = [
   {
     imageSrc: "/img/work/5.jpg",
     blurImage:
-      "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCACTAJMDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDVooopgJSUtJQAlIaWkNACGmmnGmmgBppDSmkNADTTTTjTTQA00004000AIabTjTaAEooooASiiigDXooooASkpaSgBKQ0tIaAENNNONNNADTSGlNIaAGmmmnGmmgBppppxppoAQ02nGm0AJRRRQAlFFFAGvRRRQAlJS0lACUhpaQ0AIaaacaaaAGmkNKaQ0ANNNNONNNADTTTTjTTQAhptONNoASiiigBKKKKANeiiigBKSlpKAEpDS0hoAQ0004000ANNIaU0hoAaaaacaaaAGmmmnGmmgBDTacabQAlFFFACUUUUAa9FFFACUlLSUAJSGlpDQAhpppxppoAaaQ0ppDQA00004000ANNNNONNNACGm0402gBKKKKAEooooA16KKKAEpKWkoASkNLSGgBDTTTjTTQA00hpTSGgBppppxppoAaaaacaaaAENNpxptACUUUUAJRRRQBr0UUUAJSUtJQAlIaWkNACGmmnGmmgBppDSmkNADTTTTjTTQA00004000AIabTjTaAEooooASiiigDXooooASkpaSgBKQ0tIaAENNNONNNADTSGlNIaAGmmmnGmmgBppppxppoAQ02nGm0AJRRRQAlFFFAGvRRRQAlJS0lACUhpaQ0AIaaacaaaAGmkNKaQ0ANNNNONNNADTTTTjTTQAhptONNoASiiigBKKKKANeiiigBKSiigBKQ0UUAIaaaKKAGmkNFFADTTTRRQA0000UUAIabRRQAlFFFACUUUUAf//Z",
+      "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/AARCACTAJMDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDVooopgJSUtJQAlIaWkNACGmmnGmmgBppDSmkNADTTTTjTTQA00004000AIabTjTaAEooooASiiigDXooooASkpaSgBKQ0tIaAENNNONNNADTSGlNIaAGmmmnGmmgBppppxppoAQ02nGm0AJRRRQAlFFFAGvRRRQAlJS0lACUhpaQ0AIaaacaaaAGmkNKaQ0ANNNNONNNADTTTTjTTQAhptONNoASiiigBKKKKANeiiigBKSlpKAEpDS0hoAQ0004000ANNIaU0hoAaaaacaaaAGmmmnGmmgBDTacabQAlFFFACUUUUAa9FFFACUlLSUAJSGlpDQAhpppxppoAaaQ0ppDQA00004000ANNNNONNNACGm0402gBKKKKAEooooA16KKKAEpKWkoASkNLSGgBDTTTjTTQA00hpTSGgBppppxppoAaaaacaaaAENNpxptACUUUUAJRRRQBr0UUUAJSUtJQAlIaWkNACGmmnGmmgBppDSmkNADTTTTjTTQA00004000AIabTjTaAEooooASiiigDXooooASkpaSgBKQ0tIaAENNNONNNADTSGlNIaAGmmmnGmmgBppppxppoAQ02nGm0AJRRRQAlFFFAGvRRRQAlJS0lACUhpaQ0AIaaacaaaAGmkNKaQ0ANNNNONNNADTTTTjTTQAhptONNoASiiigBKKKKANeiiigBKSiigBKQ0UUAIaaaKKAGmkNFFADTTTRRQA0000UUAIabRRQAlFFFACUUUUAf//Z",
     hoverImageSrc: "/img/work-hover/5.jpg",
     title: "Yeti",
     category: "Illustrations",
@@ -56,7 +57,7 @@ const worksData = [
   {
     imageSrc: "/img/work/6.jpg",
     blurImage:
-      "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCACTAJMDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDVooopgJSUtJQAlIaWkNACGmmnGmmgBppDSmkNADTTTTjTTQA00004000AIabTjTaAEooooASiiigDXooooASkpaSgBKQ0tIaAENNNONNNADTSGlNIaAGmmmnGmmgBppppxppoAQ02nGm0AJRRRQAlFFFAGvRRRQAlJS0lACUhpaQ0AIaaacaaaAGmkNKaQ0ANNNNONNNADTTTTjTTQAhptONNoASiiigBKKKKANeiiigBKSlpKAEpDS0hoAQ0004000ANNIaU0hoAaaaacaaaAGmmmnGmmgBDTacabQAlFFFACUUUUAa9FFFACUlLSUAJSGlpDQAhpppxppoAaaQ0ppDQA00004000ANNNNONNNACGm0402gBKKKKAEooooA16KKKAEpKWkoASkNLSGgBDTTTjTTQA00hpTSGgBppppxppoAaaaacaaaAENNpxptACUUUUAJRRRQBr0UUUAJSUtJQAlIaWkNACGmmnGmmgBppDSmkNADTTTTjTTQA00004000AIabTjTaAEooooASiiigDXooooASkpaSgBKQ0tIaAENNNONNNADTSGlNIaAGmmmnGmmgBppppxppoAQ02nGm0AJRRRQAlFFFAGvRRRQAlJS0lACUhpaQ0AIaaacaaaAGmkNKaQ0ANNNNONNNADTTTTjTTQAhptONNoASiiigBKKKKANeiiigBKSiigBKQ0UUAIaaaKKAGmkNFFADTTTRRQA0000UUAIabRRQAlFFFACUUUUAf//Z",
+      "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/AARCACTAJMDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDVooopgJSUtJQAlIaWkNACGmmnGmmgBppDSmkNADTTTTjTTQA00004000AIabTjTaAEooooASiiigDXooooASkpaSgBKQ0tIaAENNNONNNADTSGlNIaAGmmmnGmmgBppppxppoAQ02nGm0AJRRRQAlFFFAGvRRRQAlJS0lACUhpaQ0AIaaacaaaAGmkNKaQ0ANNNNONNNADTTTTjTTQAhptONNoASiiigBKKKKANeiiigBKSlpKAEpDS0hoAQ0004000ANNIaU0hoAaaaacaaaAGmmmnGmmgBDTacabQAlFFFACUUUUAa9FFFACUlLSUAJSGlpDQAhpppxppoAaaQ0ppDQA00004000ANNNNONNNACGm0402gBKKKKAEooooA16KKKAEpKWkoASkNLSGgBDTTTjTTQA00hpTSGgBppppxppoAaaaacaaaAENNpxptACUUUUAJRRRQBr0UUUAJSUtJQAlIaWkNACGmmnGmmgBppDSmkNADTTTTjTTQA00004000AIabTjTaAEooooASiiigDXooooASkpaSgBKQ0tIaAENNNONNNADTSGlNIaAGmmmnGmmgBppppxppoAQ02nGm0AJRRRQAlFFFAGvRRRQAlJS0lACUhpaQ0AIaaacaaaAGmkNKaQ0ANNNNONNNADTTTTjTTQAhptONNoASiiigBKKKKANeiiigBKSiigBKQ0UUAIaaaKKAGmkNFFADTTTRRQA0000UUAIabRRQAlFFFACUUUUAf//Z",
     hoverImageSrc: "/img/work-hover/6.jpg",
     title: "EhaKade",
     category: "Branding",
@@ -74,13 +75,59 @@ const worksData = [
   {
     imageSrc: "/img/work/8.jpg",
     blurImage:
-      "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCACTAJMDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDVooopgJSUtJQAlIaWkNACGmmnGmmgBppDSmkNADTTTTjTTQA00004000AIabTjTaAEooooASiiigDXooooASkpaSgBKQ0tIaAENNNONNNADTSGlNIaAGmmmnGmmgBppppxppoAQ02nGm0AJRRRQAlFFFAGvRRRQAlJS0lACUhpaQ0AIaaacaaaAGmkNKaQ0ANNNNONNNADTTTTjTTQAhptONNoASiiigBKKKKANeiiigBKSlpKAEpDS0hoAQ0004000ANNIaU0hoAaaaacaaaAGmmmnGmmgBDTacabQAlFFFACUUUUAa9FFFACUlLSUAJSGlpDQAhpppxppoAaaQ0ppDQA00004000ANNNNONNNACGm0402gBKKKKAEooooA16KKKAEpKWkoASkNLSGgBDTTTjTTQA00hpTSGgBppppxppoAaaaacaaaAENNpxptACUUUUAJRRRQBr0UUUAJSUtJQAlIaWkNACGmmnGmmgBppDSmkNADTTTTjTTQA00004000AIabTjTaAEooooASiiigDXooooASkpaSgBKQ0tIaAENNNONNNADTSGlNIaAGmmmnGmmgBppppxppoAQ02nGm0AJRRRQAlFFFAGvRRRQAlJS0lACUhpaQ0AIaaacaaaAGmkNKaQ0ANNNNONNNADTTTTjTTQAhptONNoASiiigBKKKKANeiiigBKSiigBKQ0UUAIaaaKKAGmkNFFADTTTRRQA0000UUAIabRRQAlFFFACUUUUAf//Z",
+      "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/AARCACTAJMDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDVooopgJSUtJQAlIaWkNACGmmnGmmgBppDSmkNADTTTTjTTQA00004000AIabTjTaAEooooASiiigDXooooASkpaSgBKQ0tIaAENNNONNNADTSGlNIaAGmmmnGmmgBppppxppoAQ02nGm0AJRRRQAlFFFAGvRRRQAlJS0lACUhpaQ0AIaaacaaaAGmkNKaQ0ANNNNONNNADTTTTjTTQAhptONNoASiiigBKKKKANeiiigBKSlpKAEpDS0hoAQ0004000ANNIaU0hoAaaaacaaaAGmmmnGmmgBDTacabQAlFFFACUUUUAa9FFFACUlLSUAJSGlpDQAhpppxppoAaaQ0ppDQA00004000ANNNNONNNACGm0402gBKKKKAEooooA16KKKAEpKWkoASkNLSGgBDTTTjTTQA00hpTSGgBppppxppoAaaaacaaaAENNpxptACUUUUAJRRRQBr0UUUAJSUtJQAlIaWkNACGmmnGmmgBppDSmkNADTTTTjTTQA00004000AIabTjTaAEooooASiiigDXooooASkpaSgBKQ0tIaAENNNONNNADTSGlNIaAGmmmnGmmgBppppxppoAQ02nGm0AJRRRQAlFFFAGvRRRQAlJS0lACUhpaQ0AIaaacaaaAGmkNKaQ0ANNNNONNNADTTTTjTTQAhptONNoASiiigBKKKKANeiiigBKSiigBKQ0UUAIaaaKKAGmkNFFADTTTRRQA0000UUAIabRRQAlFFFACUUUUAf//Z",
     hoverImageSrc: "/img/work-hover/8.jpg",
     title: "Codezela",
     category: "Illustrations",
     href: "/work/Codezela Illustrations - Work With Ddigital_compressed.pdf",
   },
 ];
+
+function WorkSlide({ data }: { data: (typeof worksData)[0] }) {
+  const [hasHovered, setHasHovered] = useState(false);
+
+  return (
+    <div
+      className="relative flex flex-col items-center text-center h-full"
+      onMouseEnter={() => setHasHovered(true)}
+      onTouchStart={() => setHasHovered(true)}
+    >
+      <div className="absolute left-4 top-4 lg:left-4 lg:top-4 bg-black text-white text-md text-center font-semibold px-3 py-3 rounded-md z-40 w-32">
+        {data.category}
+      </div>
+      <div className="flex flex-col bg-center bg-cover items-center justify-center">
+        <Image
+          className="rounded-xl w-full h-auto"
+          src={data.imageSrc}
+          alt={data.title}
+          width={500}
+          height={500}
+          placeholder="blur"
+          blurDataURL={data.blurImage}
+        />
+        <Link href={data.href} target="_blank" className="-mt-[100%]">
+          <div className="inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity m-4 md:m-6">
+            {hasHovered && (
+              <Image
+                className="object-cover rounded-xl w-full h-auto"
+                src={data.hoverImageSrc}
+                alt={data.title}
+                width={500}
+                height={500}
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL={data.blurImage}
+              />
+            )}
+          </div>
+        </Link>
+      </div>
+      <div className="flex flex-col">
+        <div className="text-xl text-black font-bold mt-5">{data.category}</div>
+      </div>
+    </div>
+  );
+}
 
 export default function WorkSection() {
   return (
@@ -133,41 +180,7 @@ export default function WorkSection() {
         >
           {worksData.map((data, index) => (
             <SwiperSlide key={index}>
-              <div className="relative flex flex-col items-center text-center h-full">
-                <div className="absolute left-4 top-4 lg:left-4 lg:top-4 bg-black text-white text-md text-center font-semibold px-3 py-3 rounded-md z-40 w-32">
-                  {data.category}
-                </div>
-                <div className="flex flex-col bg-center bg-cover items-center justify-center">
-                  <Image
-                    className="rounded-xl w-full h-auto"
-                    src={data.imageSrc}
-                    alt={data.title}
-                    width={500}
-                    height={500}
-                    placeholder="blur"
-                    blurDataURL={data.blurImage}
-                  />
-                  <Link href={data.href} target="_blank" className="-mt-[100%]">
-                    <div className="inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity m-4 md:m-6">
-                      <Image
-                        className="object-cover rounded-xl w-full h-auto"
-                        src={data.hoverImageSrc}
-                        alt={data.title}
-                        width={500}
-                        height={500}
-                        loading="lazy"
-                        placeholder="blur"
-                        blurDataURL={data.blurImage}
-                      />
-                    </div>
-                  </Link>
-                </div>
-                <div className="flex flex-col">
-                  <div className="text-xl text-black font-bold mt-5">
-                    {data.category}
-                  </div>
-                </div>
-              </div>
+              <WorkSlide data={data} />
             </SwiperSlide>
           ))}
         </Swiper>
