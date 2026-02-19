@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
+const texts = ["Stand Out", "Succeed", "Wow", "Convert"];
+
 export default function HeroSection() {
-  const texts = ["Stand Out", "Succeed", "Wow", "Convert"];
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
-  const [slidePosition, setSlidePosition] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -15,7 +15,7 @@ export default function HeroSection() {
     }, 1500);
 
     return () => clearInterval(interval);
-  }, [texts.length]);
+  }, []);
 
   const handleButtonClick = () => {
     let scrollDistance = 500;
