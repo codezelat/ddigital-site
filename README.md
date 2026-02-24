@@ -46,7 +46,7 @@ Ddigital is a dynamic design agency and digital media services provider based in
 - **📱 Fully Responsive** - Optimized for desktop, tablet, and mobile devices
 - **⚡ Performance Optimized** - Server-side rendering, image optimization, and React 19 compiler
 - **🎬 Interactive Sections** - Hero, About, Services, Work Portfolio, Testimonials, Contact
-- **📧 Contact Form** - Email integration with Nodemailer
+- **📧 Contact Form** - Email integration with Brevo Transactional Email API
 - **🖼️ Image Optimization** - Next.js Image component with blur placeholders
 - **🎠 Carousel/Slider** - Interactive work showcase using Swiper
 - **🎥 Video Embeds** - YouTube integration with react-lite-youtube-embed
@@ -60,7 +60,7 @@ Ddigital is a dynamic design agency and digital media services provider based in
 
 ### Core Framework
 
-- **[Next.js 15.0.3](https://nextjs.org/)** - React framework with App Router
+- **[Next.js 15.0.7](https://nextjs.org/)** - React framework with App Router
 - **[React 19.0.0](https://reactjs.org/)** - UI library with experimental compiler
 - **[TypeScript 5.6.3](https://www.typescriptlang.org/)** - Type-safe JavaScript
 
@@ -79,7 +79,7 @@ Ddigital is a dynamic design agency and digital media services provider based in
 
 ### Backend
 
-- **[Nodemailer 7.0.10](https://nodemailer.com/)** - Email sending
+- **[Brevo SMTP API](https://developers.brevo.com/docs/send-a-transactional-email)** - Transactional email sending
 - **Next.js API Routes** - Serverless API endpoints
 
 ### Development Tools
@@ -123,17 +123,19 @@ Ensure you have the following installed:
 Create a `.env.local` file in the root directory:
 
 ```env
-# Email Configuration (Nodemailer)
-NODEMAILER_EMAIL=your-email@gmail.com
-NODEMAILER_PASSWORD=your-app-password
+# Email Configuration (Brevo)
+BREVO_API_KEY=your-brevo-api-key
+BREVO_SENDER_EMAIL=no-reply@ddigital.lk
 
-# Optional: Custom configurations
-NEXT_PUBLIC_SITE_URL=https://ddigital.lk
+# Optional (defaults shown)
+BREVO_SENDER_NAME=Ddigital Website
+CONTACT_RECEIVER_EMAIL=hello@ddigital.lk
 ```
 
 **⚠️ Important Notes:**
 
-- For Gmail, use [App Passwords](https://support.google.com/accounts/answer/185833) instead of your regular password
+- `BREVO_SENDER_EMAIL` must be a sender identity verified in Brevo
+- `CONTACT_RECEIVER_EMAIL` defaults to `hello@ddigital.lk` if omitted
 - Never commit `.env.local` to version control
 - Add `.env.local` to your `.gitignore` file
 
@@ -285,7 +287,7 @@ ddigital-site/
 
 ### POST `/api/email`
 
-Sends contact form emails using Nodemailer.
+Sends contact form emails using Brevo Transactional Email API.
 
 **Request Body:**
 
@@ -329,7 +331,8 @@ Sends contact form emails using Nodemailer.
    - Vercel will auto-detect Next.js
 
 2. **Configure Environment Variables**
-   - Add `NODEMAILER_EMAIL` and `NODEMAILER_PASSWORD` in Vercel dashboard
+   - Add `BREVO_API_KEY` and `BREVO_SENDER_EMAIL` in Vercel dashboard
+   - Optional: `BREVO_SENDER_NAME`, `CONTACT_RECEIVER_EMAIL`
 
 3. **Deploy**
    - Push to your main branch
@@ -349,8 +352,10 @@ npm run build
 
 Ensure all environment variables are set in your hosting platform:
 
-- `NODEMAILER_EMAIL`
-- `NODEMAILER_PASSWORD`
+- `BREVO_API_KEY`
+- `BREVO_SENDER_EMAIL`
+- `BREVO_SENDER_NAME` (optional)
+- `CONTACT_RECEIVER_EMAIL` (optional, defaults to `hello@ddigital.lk`)
 
 ---
 
