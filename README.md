@@ -393,7 +393,7 @@ This project is proprietary software developed for **Ddigital** by [Codezela Tec
 **Ddigital - Digital Media Hub**
 
 - 🌐 Website: [https://ddigital.lk](https://ddigital.lk)
-- 📧 Email: ddigital.lk@gmail.com
+- 📧 Email: [hello@ddigital.lk](mailto:hello@ddigital.lk)
 - 📱 Phone: +94 72 733 3577
 - 📍 Address: 345/35, RIT Alles Mw, Colombo 08, 00800, Sri Lanka
 

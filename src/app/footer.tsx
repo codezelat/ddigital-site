@@ -36,11 +36,7 @@ export default function Footer() {
                 <Link href="/#contact">Contact</Link>
               </li>
               <li className="mb-4 text-xl">
-                <Link
-                  href="/privacy-policy"
-                >
-                  Privacy Policy
-                </Link>
+                <Link href="/privacy-policy">Privacy Policy</Link>
               </li>
             </ul>
           </div>
@@ -51,10 +47,10 @@ export default function Footer() {
           <div className="text-center sm:text-start">
             <ul className="list-none text-sm p-8 m-0">
               <li className="mb-2 text-xl">
-                <Link href="mailto:ddigital.lk@gmail.com">Email Us</Link>
+                <Link href="mailto:hello@ddigital.lk">Email Us</Link>
               </li>
               <li className="mb-2 text-xl">
-                <Link href="tel:+94727333577">Call Us</Link>
+                <Link href="tel:+94114858899">Call Us</Link>
               </li>
               <li className="mb-2 text-xl">
                 <Link href="https://wa.me/+94727333577/">WhatsApp Us</Link>
@@ -118,8 +114,8 @@ export default function Footer() {
             <div className="text-6xl font-bold text-white mb-6">Ddigital</div>
           </Link>
           <div className="text-sm text-white mb-6">
-            &copy; 2025 Ddigital. All rights reserved. A proud product built with
-            love by{" "}
+            &copy; 2025 Ddigital. All rights reserved. A proud product built
+            with love by{" "}
             <Link href="https://codezela.com" target="_blank">
               Codezela Technologies
             </Link>

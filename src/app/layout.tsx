@@ -127,7 +127,7 @@ export default function RootLayout({
       "@type": "ContactPoint",
       telephone: "+94-72-733-3577",
       contactType: "customer service",
-      email: "ddigital.lk@gmail.com",
+      email: "hello@ddigital.lk",
       availableLanguage: ["English", "Sinhala"],
     },
     sameAs: [
@@ -156,7 +156,7 @@ export default function RootLayout({
     image: "https://ddigital.lk/img/brand/banner.jpg",
     url: "https://ddigital.lk",
     telephone: "+94-72-733-3577",
-    email: "ddigital.lk@gmail.com",
+    email: "hello@ddigital.lk",
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",
